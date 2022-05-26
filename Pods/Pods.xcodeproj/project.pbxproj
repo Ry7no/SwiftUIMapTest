@@ -1,0 +1,922 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0272B1D257640889138EF346E95BA2CD /* Pods-RapidAntigenTestMapTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D01630648ECF0200491D3A0DD392ACF /* Pods-RapidAntigenTestMapTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		108EA826F285E82A325223DFB7846A6B /* Pods-RapidAntigenTestMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E99B09155924D8E8CDCEAC4CEE213 /* Pods-RapidAntigenTestMap-dummy.m */; };
+		65F6D7D9E681AE4D526E4CDD3727C3CB /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A78921B4A60F3E77F7EF5EE0D3C1C33 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-dummy.m */; };
+		7F76A0231F6933383B1D1A1C28DCF0EE /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A182B19A70D9F6DECE93FA867CDD2E98 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		845D4EDC180230921BFE6A53B8AD1CA2 /* Pods-RapidAntigenTestMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB51CCF5177C8DC2B8F5BF1A3306A2C2 /* Pods-RapidAntigenTestMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		966165C37283CB7D0858E27E7FE45528 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B089EA356105771CC9CD969B06E0D992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F3B306B18A39718343BE925A40CBB62A /* Pods-RapidAntigenTestMapTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6663D3549B671ECA11539453F19FBB5 /* Pods-RapidAntigenTestMapTests-dummy.m */; };
+		FBE10438EF972DE284093B343ADE41D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36CBCFFA042DA60D7FFE3D25D096C3F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		D7396EB0C0E4428F0875E6A043467217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D16837C04D2EAA1F65716FF2B9E3C2CD;
+			remoteInfo = "Pods-RapidAntigenTestMap";
+		};
+		FD03B709853C7D4BEF3EF0F77C9E0C50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		0D20B369232F4DA02BCD3EF46FADEE98 /* Pods-RapidAntigenTestMapTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidAntigenTestMapTests-Info.plist"; sourceTree = "<group>"; };
+		1271EBA5E1D3E5C88476CFF654E3A742 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		16C27CD877C2AECD1D9B790CF291A21F /* Pods-RapidAntigenTestMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidAntigenTestMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		2AC4CC1F24D24B6F78715D8EBC760811 /* Pods-RapidAntigenTestMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidAntigenTestMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3ECCA0BFC61268917D8E560231E51C49 /* Pods-RapidAntigenTestMapTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RapidAntigenTestMapTests.modulemap"; sourceTree = "<group>"; };
+		451CF591FC7307BA41E060CE018CF256 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47D5853C6896F5B50378AA5B543C4DC5 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4A78921B4A60F3E77F7EF5EE0D3C1C33 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-dummy.m"; sourceTree = "<group>"; };
+		4CC2FE9C0B9918F79E6B11A00A76A55B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		502E248A18A147849A8EEC5B4876FBD1 /* Pods-RapidAntigenTestMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidAntigenTestMap.debug.xcconfig"; sourceTree = "<group>"; };
+		56B27AC85CAAF3068B519FE6859F2FF2 /* Pods-RapidAntigenTestMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RapidAntigenTestMap-resources.sh"; sourceTree = "<group>"; };
+		687F2023AC0B8F7A2C66824786A24D54 /* Pods-RapidAntigenTestMapTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RapidAntigenTestMapTests"; path = Pods_RapidAntigenTestMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69735428C6EFD9A85C978DA3DE2C73A1 /* Pods-RapidAntigenTestMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RapidAntigenTestMap-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6A2474E039787540F8255034D95C7184 /* Pods-RapidAntigenTestMap */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RapidAntigenTestMap"; path = Pods_RapidAntigenTestMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3E99B09155924D8E8CDCEAC4CEE213 /* Pods-RapidAntigenTestMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RapidAntigenTestMap-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7FB960EE967D05AD07717DA8EE6FAB04 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-Info.plist"; sourceTree = "<group>"; };
+		8164B82B58E7746AC07703F8E9C091F0 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests"; path = Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3600C5A423AB52CDF9F6E05685A382 /* Pods-RapidAntigenTestMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RapidAntigenTestMap.modulemap"; sourceTree = "<group>"; };
+		92878B077E253452A96AD4EA85D56287 /* Pods-RapidAntigenTestMap-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidAntigenTestMap-Info.plist"; sourceTree = "<group>"; };
+		9D01630648ECF0200491D3A0DD392ACF /* Pods-RapidAntigenTestMapTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RapidAntigenTestMapTests-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A182B19A70D9F6DECE93FA867CDD2E98 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-umbrella.h"; sourceTree = "<group>"; };
+		A6663D3549B671ECA11539453F19FBB5 /* Pods-RapidAntigenTestMapTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RapidAntigenTestMapTests-dummy.m"; sourceTree = "<group>"; };
+		AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		AF7B3978903EFD58DDAA879853F5982A /* Pods-RapidAntigenTestMapTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidAntigenTestMapTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		D82F0DA8A3C2D793932B6B41D13E4C0A /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-resources.sh"; sourceTree = "<group>"; };
+		DA45B10085172F41C7BC3C71A29012C6 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.modulemap"; sourceTree = "<group>"; };
+		E01DCF5408DA37662695D993DB421FC9 /* Pods-RapidAntigenTestMapTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RapidAntigenTestMapTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		EB51CCF5177C8DC2B8F5BF1A3306A2C2 /* Pods-RapidAntigenTestMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RapidAntigenTestMap-umbrella.h"; sourceTree = "<group>"; };
+		ECBA10134B5F800A3E7DB22A4A90E228 /* Pods-RapidAntigenTestMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidAntigenTestMap-acknowledgements.plist"; sourceTree = "<group>"; };
+		F728F116E1129185F305E14647F4C1DC /* Pods-RapidAntigenTestMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidAntigenTestMap.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34145F04097F4029E6E68552D93995BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				966165C37283CB7D0858E27E7FE45528 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		541E889A79AD8854031142E79D6F9021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE10438EF972DE284093B343ADE41D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99ED4329C9AAC5D4F789373F317C666E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B089EA356105771CC9CD969B06E0D992 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05BEEAA2B734CDF4F034201F29DFE4E2 /* Pods-RapidAntigenTestMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				3ECCA0BFC61268917D8E560231E51C49 /* Pods-RapidAntigenTestMapTests.modulemap */,
+				E01DCF5408DA37662695D993DB421FC9 /* Pods-RapidAntigenTestMapTests-acknowledgements.markdown */,
+				AF7B3978903EFD58DDAA879853F5982A /* Pods-RapidAntigenTestMapTests-acknowledgements.plist */,
+				A6663D3549B671ECA11539453F19FBB5 /* Pods-RapidAntigenTestMapTests-dummy.m */,
+				0D20B369232F4DA02BCD3EF46FADEE98 /* Pods-RapidAntigenTestMapTests-Info.plist */,
+				9D01630648ECF0200491D3A0DD392ACF /* Pods-RapidAntigenTestMapTests-umbrella.h */,
+				2AC4CC1F24D24B6F78715D8EBC760811 /* Pods-RapidAntigenTestMapTests.debug.xcconfig */,
+				16C27CD877C2AECD1D9B790CF291A21F /* Pods-RapidAntigenTestMapTests.release.xcconfig */,
+			);
+			name = "Pods-RapidAntigenTestMapTests";
+			path = "Target Support Files/Pods-RapidAntigenTestMapTests";
+			sourceTree = "<group>";
+		};
+		17D1542A2873A53FBA2A027E240E8547 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A2474E039787540F8255034D95C7184 /* Pods-RapidAntigenTestMap */,
+				8164B82B58E7746AC07703F8E9C091F0 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */,
+				687F2023AC0B8F7A2C66824786A24D54 /* Pods-RapidAntigenTestMapTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				5FCC553E82707BA26B1F6EDC00161B0D /* Base */,
+				387015716759109261086A8C0CA736F5 /* Maps */,
+				9601491F11C5653D98D1EB5DF2155DFE /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		387015716759109261086A8C0CA736F5 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */,
+				E48211C21EA696EBC32B31525F5FFA67 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5FCC553E82707BA26B1F6EDC00161B0D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		9334C3B23A1249625ECA73EE077C38DB /* Pods-RapidAntigenTestMap */ = {
+			isa = PBXGroup;
+			children = (
+				8D3600C5A423AB52CDF9F6E05685A382 /* Pods-RapidAntigenTestMap.modulemap */,
+				69735428C6EFD9A85C978DA3DE2C73A1 /* Pods-RapidAntigenTestMap-acknowledgements.markdown */,
+				ECBA10134B5F800A3E7DB22A4A90E228 /* Pods-RapidAntigenTestMap-acknowledgements.plist */,
+				6B3E99B09155924D8E8CDCEAC4CEE213 /* Pods-RapidAntigenTestMap-dummy.m */,
+				92878B077E253452A96AD4EA85D56287 /* Pods-RapidAntigenTestMap-Info.plist */,
+				56B27AC85CAAF3068B519FE6859F2FF2 /* Pods-RapidAntigenTestMap-resources.sh */,
+				EB51CCF5177C8DC2B8F5BF1A3306A2C2 /* Pods-RapidAntigenTestMap-umbrella.h */,
+				502E248A18A147849A8EEC5B4876FBD1 /* Pods-RapidAntigenTestMap.debug.xcconfig */,
+				F728F116E1129185F305E14647F4C1DC /* Pods-RapidAntigenTestMap.release.xcconfig */,
+			);
+			name = "Pods-RapidAntigenTestMap";
+			path = "Target Support Files/Pods-RapidAntigenTestMap";
+			sourceTree = "<group>";
+		};
+		9601491F11C5653D98D1EB5DF2155DFE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */,
+				C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		A6ED76BA8904997C28CB36955D525A22 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA45B10085172F41C7BC3C71A29012C6 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.modulemap */,
+				1271EBA5E1D3E5C88476CFF654E3A742 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-acknowledgements.markdown */,
+				47D5853C6896F5B50378AA5B543C4DC5 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-acknowledgements.plist */,
+				4A78921B4A60F3E77F7EF5EE0D3C1C33 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-dummy.m */,
+				7FB960EE967D05AD07717DA8EE6FAB04 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-Info.plist */,
+				D82F0DA8A3C2D793932B6B41D13E4C0A /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-resources.sh */,
+				A182B19A70D9F6DECE93FA867CDD2E98 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-umbrella.h */,
+				451CF591FC7307BA41E060CE018CF256 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */,
+				4CC2FE9C0B9918F79E6B11A00A76A55B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig */,
+			);
+			name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests";
+			path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests";
+			sourceTree = "<group>";
+		};
+		C28B13339B47BF90BFA739E67229D771 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9334C3B23A1249625ECA73EE077C38DB /* Pods-RapidAntigenTestMap */,
+				A6ED76BA8904997C28CB36955D525A22 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */,
+				05BEEAA2B734CDF4F034201F29DFE4E2 /* Pods-RapidAntigenTestMapTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DF3634087891871FA7B65CC4A8E6DB71 /* Pods */,
+				17D1542A2873A53FBA2A027E240E8547 /* Products */,
+				C28B13339B47BF90BFA739E67229D771 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF3634087891871FA7B65CC4A8E6DB71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E48211C21EA696EBC32B31525F5FFA67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */,
+				E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FFFF7600621C5B14D4C22EFCC390C88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0272B1D257640889138EF346E95BA2CD /* Pods-RapidAntigenTestMapTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E3A960AB0814F2D04517FC7BA324933 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845D4EDC180230921BFE6A53B8AD1CA2 /* Pods-RapidAntigenTestMap-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A43B7D080F67967A5A12C7C4DE3AE3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F76A0231F6933383B1D1A1C28DCF0EE /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6F4CBB741D5546A37C01C7E977C9C88B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B62C31F5FB1835D74081114A11C07BE /* Build configuration list for PBXNativeTarget "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests" */;
+			buildPhases = (
+				53A43B7D080F67967A5A12C7C4DE3AE3 /* Headers */,
+				8B014D6FBD72613BFC245A3FA7F070B6 /* Sources */,
+				34145F04097F4029E6E68552D93995BB /* Frameworks */,
+				99E77360B6B2AAB5994D3CB56FD22072 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42241A9ED61A7C2CD63FF475DDCEAAC7 /* PBXTargetDependency */,
+			);
+			name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests";
+			productName = Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests;
+			productReference = 8164B82B58E7746AC07703F8E9C091F0 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		8270123AABFC3C57493BFC2F014F8AD5 /* Pods-RapidAntigenTestMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E2109B3076B0524BDF6C9049A129EFE /* Build configuration list for PBXNativeTarget "Pods-RapidAntigenTestMapTests" */;
+			buildPhases = (
+				0FFFF7600621C5B14D4C22EFCC390C88 /* Headers */,
+				96337F1F827C484AFF26D438BD38DCB9 /* Sources */,
+				541E889A79AD8854031142E79D6F9021 /* Frameworks */,
+				4A031BCE294E700799026DB718A1DB94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1CAA8E9C5CD690B01FDE7D650C71309 /* PBXTargetDependency */,
+			);
+			name = "Pods-RapidAntigenTestMapTests";
+			productName = Pods_RapidAntigenTestMapTests;
+			productReference = 687F2023AC0B8F7A2C66824786A24D54 /* Pods-RapidAntigenTestMapTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		D16837C04D2EAA1F65716FF2B9E3C2CD /* Pods-RapidAntigenTestMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55CF64035C31475EAC6FBDB6390D0473 /* Build configuration list for PBXNativeTarget "Pods-RapidAntigenTestMap" */;
+			buildPhases = (
+				3E3A960AB0814F2D04517FC7BA324933 /* Headers */,
+				E22B6AA7FE234402C2C1D8068B12230A /* Sources */,
+				99ED4329C9AAC5D4F789373F317C666E /* Frameworks */,
+				F1177FECB419DA9EEDF45CBD79C4A87F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				249F2F8B4196323264C484F1C2B4D41C /* PBXTargetDependency */,
+			);
+			name = "Pods-RapidAntigenTestMap";
+			productName = Pods_RapidAntigenTestMap;
+			productReference = 6A2474E039787540F8255034D95C7184 /* Pods-RapidAntigenTestMap */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 17D1542A2873A53FBA2A027E240E8547 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
+				D16837C04D2EAA1F65716FF2B9E3C2CD /* Pods-RapidAntigenTestMap */,
+				6F4CBB741D5546A37C01C7E977C9C88B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests */,
+				8270123AABFC3C57493BFC2F014F8AD5 /* Pods-RapidAntigenTestMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A031BCE294E700799026DB718A1DB94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E77360B6B2AAB5994D3CB56FD22072 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1177FECB419DA9EEDF45CBD79C4A87F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B014D6FBD72613BFC245A3FA7F070B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65F6D7D9E681AE4D526E4CDD3727C3CB /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96337F1F827C484AFF26D438BD38DCB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3B306B18A39718343BE925A40CBB62A /* Pods-RapidAntigenTestMapTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E22B6AA7FE234402C2C1D8068B12230A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				108EA826F285E82A325223DFB7846A6B /* Pods-RapidAntigenTestMap-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		249F2F8B4196323264C484F1C2B4D41C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 36CBCFFA042DA60D7FFE3D25D096C3F0 /* PBXContainerItemProxy */;
+		};
+		42241A9ED61A7C2CD63FF475DDCEAAC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = FD03B709853C7D4BEF3EF0F77C9E0C50 /* PBXContainerItemProxy */;
+		};
+		F1CAA8E9C5CD690B01FDE7D650C71309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RapidAntigenTestMap";
+			target = D16837C04D2EAA1F65716FF2B9E3C2CD /* Pods-RapidAntigenTestMap */;
+			targetProxy = D7396EB0C0E4428F0875E6A043467217 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BDC47D8EC1606BD8E4158E350E3B040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 502E248A18A147849A8EEC5B4876FBD1 /* Pods-RapidAntigenTestMap.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46612BB9107350B4539608CD30A74996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AC4CC1F24D24B6F78715D8EBC760811 /* Pods-RapidAntigenTestMapTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4760D87F515C1FF7011B5A1D4B01B5AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 451CF591FC7307BA41E060CE018CF256 /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B17F8A8DD11E42F7E5517276C2679B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16C27CD877C2AECD1D9B790CF291A21F /* Pods-RapidAntigenTestMapTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		92486E5E72E54FAF60E1A7D022C21B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		934ED2B84836A780113D1F63484628B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E17E4992F48DF9EF32C596B355FBA5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F728F116E1129185F305E14647F4C1DC /* Pods-RapidAntigenTestMap.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4486C57BB2FA6129BEABECC4E19FCD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC2FE9C0B9918F79E6B11A00A76A55B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BB9F138D6BE5B0B420804AA4F837BD74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAD95AA7CDFAD96FA4035B88B54EA6F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E2109B3076B0524BDF6C9049A129EFE /* Build configuration list for PBXNativeTarget "Pods-RapidAntigenTestMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46612BB9107350B4539608CD30A74996 /* Debug */,
+				7B17F8A8DD11E42F7E5517276C2679B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9F138D6BE5B0B420804AA4F837BD74 /* Debug */,
+				FAD95AA7CDFAD96FA4035B88B54EA6F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				934ED2B84836A780113D1F63484628B2 /* Debug */,
+				92486E5E72E54FAF60E1A7D022C21B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55CF64035C31475EAC6FBDB6390D0473 /* Build configuration list for PBXNativeTarget "Pods-RapidAntigenTestMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BDC47D8EC1606BD8E4158E350E3B040 /* Debug */,
+				9E17E4992F48DF9EF32C596B355FBA5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B62C31F5FB1835D74081114A11C07BE /* Build configuration list for PBXNativeTarget "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4760D87F515C1FF7011B5A1D4B01B5AF /* Debug */,
+				B4486C57BB2FA6129BEABECC4E19FCD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
