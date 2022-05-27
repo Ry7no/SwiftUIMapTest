@@ -17,6 +17,7 @@ class MedData: ObservableObject {
     
     @Published var MedModels = [MedModel]()
     @Published var NearMedModels: [MedModel] = []
+    @Published var NearestMed: [MedModel] = []
     
     func downloadCSVOnline() {
         
@@ -120,8 +121,7 @@ class MedData: ObservableObject {
     
     func compareWithRadius(radius: Double) {
         
-//        NearMedModels = []
-    //    nearestAEDLocation = []
+        NearMedModels = []
         
         var pastDistance: Double = radius
         
@@ -137,15 +137,16 @@ class MedData: ObservableObject {
                 if distanceBetween < radius {
                     NearMedModels.append(MedModels[i])
                     
-//                    if pastDistance > distanceBetween {
-//                        pastDistance = distanceBetween
-//                        nearestAEDLocation.removeAll()
-//                        nearestAEDLocation.append(AEDLocations[i])
-//                    }
+                    if pastDistance > distanceBetween {
+                        pastDistance = distanceBetween
+                        NearestMed.removeAll()
+                        NearestMed.append(MedModels[i])
+                    }
                 }
             }
         
     print("NEAR: \(NearMedModels.count)")
+    print("NEAREST: \(NearestMed.count)")
         
     }
     

@@ -13,6 +13,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var manager: CLLocationManager = .init()
     @Published var userPosition: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 25.044633, longitude: 121.559722)
+    @Published var pastUserPosition: CLLocationCoordinate2D = .init()
     @Published var currentLocation: CLLocation = .init()
     
     override init() {
@@ -45,26 +46,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         guard let _ = locations.last else { return }
         manager.stopMonitoringSignificantLocationChanges()
         let locationValue: CLLocationCoordinate2D = manager.location!.coordinate
+        pastUserPosition = userPosition
         userPosition = locationValue
-        
-//        if currentLocation == nil {
-//
-//            currentLocation = locations.last
-            
-            
-            
-            
-            
-//            mainView.gmapView.camera = GMSCameraPosition.camera(withTarget: locationValue, zoom: Float(11))
-//
-//            CATransaction.begin()
-//            CATransaction.setValue(2.0, forKey: kCATransactionAnimationDuration)
-//            let camera = GMSCameraPosition.camera(withTarget: locationValue, zoom: Float(14.9))
-//            mainView.gmapView.animate(to: camera)
-//            CATransaction.commit()
-            
-            //locationManager.stopUpdatingLocation()
-//        }
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
