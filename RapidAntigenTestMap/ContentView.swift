@@ -10,6 +10,8 @@ import GoogleMaps
 
 struct ContentView: View {
     
+    @ObservedObject var locationManager = LocationManager()
+    
     init(){
         UITabBar.appearance().isHidden = true
     }
@@ -28,14 +30,17 @@ struct ContentView: View {
                 
                 Text("Settings")
                     .tag(Tab.settings)
-   
             }
-            
             TabBarView(currentTab: $currentTab)
+        }
+        .onAppear{
+                DispatchQueue.main.async {
+                    print("\(locationManager.userPosition)")
+                }
+
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -53,12 +53,13 @@ struct MapView: View {
 struct gmapView: UIViewRepresentable {
     
     @StateObject var medData = MedData()
+    @ObservedObject var locationManager = LocationManager()
     
     typealias UIViewType = GMSMapView
     
     func makeUIView(context: Context) -> GMSMapView {
         
-        let camera = GMSCameraPosition.camera(withTarget: userPosition, zoom: 15)
+        let camera = GMSCameraPosition.camera(withTarget: locationManager.userPosition, zoom: 15)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         
         return mapView
@@ -66,11 +67,16 @@ struct gmapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: GMSMapView, context: Context) {
         
+        
+        uiView.clear()
+        
+        uiView.camera = GMSCameraPosition.camera(withTarget: locationManager.userPosition, zoom: 14.8)
+        
         let userMarker = GMSMarker()
-        userMarker.position = userPosition
+        userMarker.position = locationManager.userPosition
         userMarker.map = uiView
         
-        let circle = GMSCircle(position: userPosition, radius: CLLocationDistance(radius))
+        let circle = GMSCircle(position: locationManager.userPosition, radius: CLLocationDistance(radius))
         circle.fillColor = UIColor(white: 0.7, alpha: 0.3)
         circle.strokeWidth = 3
         circle.strokeColor = .orange

@@ -23,6 +23,7 @@
 		FD30CF33283FBBB80025EE66 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF32283FBBB80025EE66 /* ListView.swift */; };
 		FD30CF35283FBC0F0025EE66 /* MedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */; };
 		FD30CF39283FBE0E0025EE66 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF38283FBE0E0025EE66 /* TabBarView.swift */; };
+		FD30CF3B283FD28A0025EE66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF3A283FD28A0025EE66 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		FD30CF32283FBBB80025EE66 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedDataModel.swift; sourceTree = "<group>"; };
 		FD30CF38283FBE0E0025EE66 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		FD30CF3A283FD28A0025EE66 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				FD30CF2A283FB7C60025EE66 /* ViewModel */,
 				FD30CF2C283FB7E00025EE66 /* View */,
 				FD30CEFB283D14810025EE66 /* RapidAntigenTestMapApp.swift */,
+				FD30CEFD283D14810025EE66 /* ContentView.swift */,
 				FD30CEFF283D14820025EE66 /* Assets.xcassets */,
 				FD30CF01283D14820025EE66 /* Preview Content */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */,
+				FD30CF3A283FD28A0025EE66 /* LocationManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,10 +205,9 @@
 		FD30CF2C283FB7E00025EE66 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FD30CEFD283D14810025EE66 /* ContentView.swift */,
+				FD30CF38283FBE0E0025EE66 /* TabBarView.swift */,
 				FD30CF30283FBA060025EE66 /* MapView.swift */,
 				FD30CF32283FBBB80025EE66 /* ListView.swift */,
-				FD30CF38283FBE0E0025EE66 /* TabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				FD30CF31283FBA060025EE66 /* MapView.swift in Sources */,
 				FD30CF2E283FB8110025EE66 /* Tab.swift in Sources */,
 				FD30CEFC283D14810025EE66 /* RapidAntigenTestMapApp.swift in Sources */,
+				FD30CF3B283FD28A0025EE66 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +621,8 @@
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Always and When In Use Usage Description";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -647,6 +653,8 @@
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Always and When In Use Usage Description";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

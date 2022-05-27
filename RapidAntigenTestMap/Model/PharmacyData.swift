@@ -8,7 +8,6 @@
 import SwiftUI
 import GoogleMaps
 
-let userPosition = CLLocationCoordinate2D(latitude: 25.044633, longitude: 121.559722)
 
 // 台北松菸：25.044633, 121.559722
 // 基隆長庚：25.120521, 121.722713
@@ -16,7 +15,7 @@ let userPosition = CLLocationCoordinate2D(latitude: 25.044633, longitude: 121.55
 // 板橋車站：25.013884, 121.463180
 // 台中車站：24.137159, 120.686262
 
-let radius: Int = 1000
+var radius: Int = 1000
 
 struct MedModel {
     

@@ -13,6 +13,8 @@ import GoogleMapsCore
 
 class MedData: ObservableObject {
     
+    @ObservedObject var locationManager = LocationManager()
+    
     @Published var MedModels = [MedModel]()
     @Published var NearMedModels: [MedModel] = []
     
@@ -121,11 +123,11 @@ class MedData: ObservableObject {
 //        NearMedModels = []
     //    nearestAEDLocation = []
         
-        var pastDistance: Double = 100
+        var pastDistance: Double = radius
         
             for i in 0..<MedModels.count-1 {
                 
-                let userPosition = CLLocation(latitude: userPosition.latitude, longitude: userPosition.longitude)
+                let userPosition = CLLocation(latitude: locationManager.userPosition.latitude, longitude: locationManager.userPosition.longitude)
                 let MedLat = MedModels[i].medPlaceLat
                 let MedLng = MedModels[i].medPlaceLon
                 let MedPosition = CLLocation(latitude: MedLat, longitude: MedLng)
