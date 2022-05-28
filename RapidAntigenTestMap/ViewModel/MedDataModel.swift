@@ -17,7 +17,11 @@ class MedData: ObservableObject {
     
     @Published var MedModels = [MedModel]()
     @Published var NearMedModels: [MedModel] = []
+    @Published var SortedNearMedModels: [MedModel] = []
     @Published var NearestMed: [MedModel] = []
+    
+    @Published var radius: Int = 1000
+    @Published var isStopUpdate: Bool = false
     
     func downloadCSVOnline() {
         
@@ -46,6 +50,7 @@ class MedData: ObservableObject {
                     print("DEBUG: Copy successfully => destinationFileURL = \(destinationFileUrl)")
                     
                     DispatchQueue.main.async {
+                        self.MedModels.removeAll()
                         self.convertCSVIntoArray(filepath: destinationFileUrlString)
 //                        compareWithRadius(radius: 900)
                     }
@@ -55,6 +60,7 @@ class MedData: ObservableObject {
                     print("DEBUG: Error creating a file \(destinationFileUrl) : \(writeError)")
                     
                     DispatchQueue.main.async {
+                        self.MedModels.removeAll()
                         self.convertCSVIntoArray(filepath: destinationFileUrlString)
 //                        compareWithRadius(radius: 900)
                     }
@@ -121,9 +127,9 @@ class MedData: ObservableObject {
     
     func compareWithRadius(radius: Double) {
         
-        NearMedModels = []
-        
         var pastDistance: Double = radius
+        NearMedModels.removeAll()
+        SortedNearMedModels.removeAll()
         
             for i in 0..<MedModels.count-1 {
                 
@@ -135,6 +141,7 @@ class MedData: ObservableObject {
                 let distanceBetween = userPosition.distance(from: MedPosition).rounded()
 
                 if distanceBetween < radius {
+                    MedModels[i].medDistance = distanceBetween
                     NearMedModels.append(MedModels[i])
                     
                     if pastDistance > distanceBetween {
@@ -144,8 +151,10 @@ class MedData: ObservableObject {
                     }
                 }
             }
+    SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
         
     print("NEAR: \(NearMedModels.count)")
+    print("SORTEDNEAR: \(SortedNearMedModels.count)")
     print("NEAREST: \(NearestMed.count)")
         
     }

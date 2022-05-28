@@ -27,7 +27,7 @@ struct TabBarView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30, height: 30)
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(currentTab == tab ? .white : .gray)
+                            .foregroundColor(currentTab == tab ? .gray : .gray.opacity(0.3))
                     }
                 }
             }
@@ -35,8 +35,9 @@ struct TabBarView: View {
             .background(alignment: .leading) {
                 Circle()
                     .fill(Color.green)
-                    .frame(width: 50, height: 50)
-                    .offset(x: 35)
+                    .frame(width: 20, height: 20)
+                    .offset(x: 40)
+                    .offset(y: 10)
                     .offset(x: indicatorOffset(width: width))
             }
         }
@@ -57,9 +58,9 @@ struct TabBarView: View {
     
     func getIndex() -> Int {
         switch currentTab {
-        case .map:
-            return 0
         case .list:
+            return 0
+        case .map:
             return 1
         case .settings:
             return 2

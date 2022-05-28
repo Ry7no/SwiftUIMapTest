@@ -8,13 +8,13 @@
 import SwiftUI
 import GoogleMaps
 
+var count = 0
+
 // 台北松菸：25.044633, 121.559722
 // 基隆長庚：25.120521, 121.722713
 // 台北北醫：25.024898, 121.561204
 // 板橋車站：25.013884, 121.463180
 // 台中車站：24.137159, 120.686262
-
-var radius: Int = 1000
 
 struct MedModel {
     
@@ -28,4 +28,6 @@ struct MedModel {
     var medStoreNumber: String           // 08 "快篩試劑截至目前結餘存貨數量"
     var medUpdateTime: String            // 09 "來源資料時間"
     var medRemarks: String               // 10 "備註"
+    var medDistance: Double = 0.0        // 11 "距離"
+    
 }

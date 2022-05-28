@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51F36A402841B906003BFF8C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A3F2841B906003BFF8C /* SettingsView.swift */; };
+		51F36A422841BDE5003BFF8C /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A412841BDE5003BFF8C /* NavBarView.swift */; };
 		A186D61D8124E126B79E74B2 /* Pods_RapidAntigenTestMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612C27CB22077BE6EF28DCF /* Pods_RapidAntigenTestMapTests.framework */; };
 		A9BB74C8D383AB28B05F078D /* Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A799B846CB01607FD6835D49 /* Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework */; };
 		CDF4382D18CF13281817E96B /* Pods_RapidAntigenTestMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B1A7307E318BE210F2A6C3 /* Pods_RapidAntigenTestMap.framework */; };
@@ -48,6 +50,8 @@
 		2A2571B7809F91E8EF9EFF49 /* Pods-RapidAntigenTestMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMapTests.release.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		35708732BC015A83354ECB1B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DFC20A1B7C9692371C85098 /* Pods-RapidAntigenTestMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.debug.xcconfig"; sourceTree = "<group>"; };
+		51F36A3F2841B906003BFF8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		51F36A412841BDE5003BFF8C /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		8612C27CB22077BE6EF28DCF /* Pods_RapidAntigenTestMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidAntigenTestMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E728332A16436E2C4E188F /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A799B846CB01607FD6835D49 /* Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				FD30CF38283FBE0E0025EE66 /* TabBarView.swift */,
+				51F36A412841BDE5003BFF8C /* NavBarView.swift */,
 				FD30CF30283FBA060025EE66 /* MapView.swift */,
 				FD30CF32283FBBB80025EE66 /* ListView.swift */,
+				51F36A3F2841B906003BFF8C /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +461,8 @@
 				FD30CF39283FBE0E0025EE66 /* TabBarView.swift in Sources */,
 				FD30CEFE283D14810025EE66 /* ContentView.swift in Sources */,
 				FD30CF33283FBBB80025EE66 /* ListView.swift in Sources */,
+				51F36A422841BDE5003BFF8C /* NavBarView.swift in Sources */,
+				51F36A402841B906003BFF8C /* SettingsView.swift in Sources */,
 				FD30CF31283FBA060025EE66 /* MapView.swift in Sources */,
 				FD30CF2E283FB8110025EE66 /* Tab.swift in Sources */,
 				FD30CEFC283D14810025EE66 /* RapidAntigenTestMapApp.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Tab: String, CaseIterable {
-    case map = "map"
     case list = "list.bullet"
+    case map = "map"
     case settings = "gearshape"
 }

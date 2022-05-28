@@ -30,6 +30,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func getLocation() {
         
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//        manager.distanceFilter = 1
+//        manager.headingFilter = 1
         manager.startUpdatingLocation()
         manager.startMonitoringVisits()
         manager.startMonitoringSignificantLocationChanges()
@@ -45,6 +47,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         
         guard let _ = locations.last else { return }
         manager.stopMonitoringSignificantLocationChanges()
+
         let locationValue: CLLocationCoordinate2D = manager.location!.coordinate
         pastUserPosition = userPosition
         userPosition = locationValue
@@ -58,6 +61,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         case .notDetermined: manager.requestWhenInUseAuthorization()
         default: ()
         }
+    }
+    
+    func stopMonitoringLocation() {
+        manager.stopMonitoringSignificantLocationChanges()
+        manager.stopUpdatingLocation()
     }
     
     func handleLocationError() {

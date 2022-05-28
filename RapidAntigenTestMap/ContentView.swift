@@ -11,24 +11,25 @@ import GoogleMaps
 struct ContentView: View {
     
     @ObservedObject var locationManager = LocationManager()
+    @EnvironmentObject var medData: MedData
     
     init(){
         UITabBar.appearance().isHidden = true
     }
     
-    @State var currentTab: Tab = .map
+    @State var currentTab: Tab = .list
     
     var body: some View {
         VStack(spacing: 0){
             TabView(selection: $currentTab) {
                 
-                MapView()
-                    .tag(Tab.map)
-                
                 ListView()
                     .tag(Tab.list)
                 
-                Text("Settings")
+                MapView()
+                    .tag(Tab.map)
+                
+                SettingsView()
                     .tag(Tab.settings)
             }
             TabBarView(currentTab: $currentTab)
