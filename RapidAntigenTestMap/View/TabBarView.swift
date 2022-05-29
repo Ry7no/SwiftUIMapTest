@@ -38,12 +38,12 @@ struct TabBarView: View {
                                 .foregroundColor(medDataModel.sortedNumber == 0 ? .white.opacity(0) : .white)
                                 .font(Font.system(size: 15))
                                 .frame(width: 20, height: 20)
-                                .offset(x: 20, y: -12)
+                                .offset(x: 15, y: -12)
                                 .background(
                                     Circle()
-                                        .fill(medDataModel.sortedNumber == 0 ? .white.opacity(0) : .orange)
+                                        .fill(medDataModel.sortedNumber == 0 ? .white.opacity(0) : Color("Orange"))
                                         .frame(width: 20, height: 20)
-                                        .offset(x: 20, y: -12 )
+                                        .offset(x: 15, y: -12 )
                                 )
                         }
    

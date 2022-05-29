@@ -63,7 +63,7 @@ struct ListView: View {
                                         
                                         Text("\(Meds[i].medName)")
                                             .frame(alignment: .leading)
-                                            .font(.title)
+                                            .font(.title2)
                                         
                                         Spacer()
                                         

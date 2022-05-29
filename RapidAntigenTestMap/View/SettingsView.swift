@@ -52,8 +52,10 @@ struct SettingsView: View {
             
             VStack (alignment: .leading) {
                 
+//                Spacer()
+                
                 HStack {
-                    Text("地圖範圍")
+                    Text("地圖範圍(半徑)")
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.green)
@@ -70,33 +72,26 @@ struct SettingsView: View {
                 Slider(value: $medDataModel.radius, in: 300...1800)
                     .accentColor(.green)
                 
+                Button {
+                    print("currentRadius: \(medDataModel.radius)")
+                } label: {
+                    Text("確認修改")
+                        .fontWeight(.bold)
+                        .font(.title2)
+                        .foregroundColor(.white)
+                }
+                .tint(.green)
+                .frame(maxWidth: .infinity)
+                .frame(height: 55)
+                .buttonStyle(.borderedProminent)
+                .controlSize(.regular)
+                
+                Spacer()
+    
             }
             .padding()
             
             
-//            Button("確認修改") {
-//                medData.radius = radiusValue
-//            }
-//            .frame(maxWidth: .infinity)
-//            .frame(height: 55)
-//            .buttonStyle(.borderedProminent)
-//            .controlSize(.regular)
-//            .padding()
-            
-            Button {
-//                medDataModel.radius = radiusValue
-                print("currentRadius: \(medDataModel.radius)")
-            } label: {
-                Text("確認修改")
-                    .fontWeight(.bold)
-                    .font(.title2)
-                    .foregroundColor(.white)
-            }
-            .tint(.green)
-            .frame(maxWidth: .infinity)
-            .frame(height: 55)
-            .buttonStyle(.borderedProminent)
-            .controlSize(.regular)
 
             Spacer()
         
