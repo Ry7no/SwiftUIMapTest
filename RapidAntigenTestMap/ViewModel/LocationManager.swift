@@ -8,6 +8,7 @@
 import SwiftUI
 import GoogleMaps
 import CoreLocation
+import UIKit
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
@@ -70,5 +71,22 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func handleLocationError() {
         // Handle Error
+    }
+    
+    func openGoogleMap(latDouble: CLLocationDegrees, longDouble: CLLocationDegrees) {
+//        guard let lat = booking?.booking?.pickup_lat, let latDouble =  Double(lat) else {Toast.show(message: StringMessages.CurrentLocNotRight);return }
+//        guard let long = booking?.booking?.pickup_long, let longDouble =  Double(long) else {Toast.show(message: StringMessages.CurrentLocNotRight);return }
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {  //if phone has an app
+            
+            if let url = URL(string: "comgooglemaps-x-callback://?saddr=&daddr=\(latDouble),\(longDouble)&directionsmode=driving") {
+                UIApplication.shared.open(url, options: [:])
+            }}
+        else {
+            //Open in browser
+            if let urlDestination = URL.init(string: "https://www.google.co.in/maps/dir/?saddr=&daddr=\(latDouble),\(longDouble)&directionsmode=driving") {
+                UIApplication.shared.open(urlDestination)
+            }
+        }
+        
     }
 }

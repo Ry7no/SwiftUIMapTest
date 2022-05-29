@@ -19,6 +19,7 @@ struct RapidAntigenTestMapApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(MedDataModel())
         }
     }
 }

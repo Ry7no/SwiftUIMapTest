@@ -11,7 +11,7 @@ import CoreLocation
 import GoogleMaps
 import GoogleMapsCore
 
-class MedData: ObservableObject {
+class MedDataModel: ObservableObject {
     
     @ObservedObject var locationManager = LocationManager()
     
@@ -20,8 +20,9 @@ class MedData: ObservableObject {
     @Published var SortedNearMedModels: [MedModel] = []
     @Published var NearestMed: [MedModel] = []
     
-    @Published var radius: Int = 1000
+    @Published var radius: CGFloat = 1000
     @Published var isStopUpdate: Bool = false
+    @Published var sortedNumber: Int = 0
     
     func downloadCSVOnline() {
         
@@ -121,13 +122,13 @@ class MedData: ObservableObject {
                 MedModels.append(MedDataInColumn)
             }
         }
-        compareWithRadius(radius: Double(radius))
+        compareWithRadius(radius: radius)
         print("csv MedModels.count \(MedModels.count)")
     }
     
-    func compareWithRadius(radius: Double) {
+    func compareWithRadius(radius: CGFloat) {
         
-        var pastDistance: Double = radius
+        var pastDistance: CGFloat = radius
         NearMedModels.removeAll()
         SortedNearMedModels.removeAll()
         
@@ -152,9 +153,10 @@ class MedData: ObservableObject {
                 }
             }
     SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
+    sortedNumber = SortedNearMedModels.count
         
     print("NEAR: \(NearMedModels.count)")
-    print("SORTEDNEAR: \(SortedNearMedModels.count)")
+    print("SORTEDNEAR: \(sortedNumber)")
     print("NEAREST: \(NearestMed.count)")
         
     }

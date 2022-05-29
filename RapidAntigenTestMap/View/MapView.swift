@@ -7,12 +7,13 @@
 
 import SwiftUI
 import GoogleMaps
+import MapKit
 
 
 
 struct MapView: View {
     
-    @StateObject var medData = MedData()
+    @ObservedObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
     //    @EnvironmentObject var medData: MedData
     
@@ -22,16 +23,13 @@ struct MapView: View {
         
         VStack {
             
-            if let Meds = medData.NearMedModels {
-                
-                
-                
+            if let Meds = medDataModel.NearMedModels {
+                          
                 if Meds.isEmpty {
-                    
-                    
+           
                     VStack {
                         
-                        NavBarView(medData: medData, locationManager: locationManager, title: "快篩地圖")
+                            NavBarView(medDataModel: medDataModel, locationManager: locationManager, title: "快篩地圖")
                         
                         Spacer()
                         
@@ -54,14 +52,14 @@ struct MapView: View {
                     
                     VStack {
 
-                        NavBarView(medData: medData, locationManager: locationManager, title: "快篩地圖")
+                        NavBarView(medDataModel: medDataModel, locationManager: locationManager, title: "快篩地圖")
  
                         ZStack (alignment: .center) {
                             
-                            gmapView()
+                            gmapView(medDataModel: medDataModel)
                                 .refreshable {}
                             
-                            if !medData.isStopUpdate {
+                            if !medDataModel.isStopUpdate {
                                 
                                 VStack {
                                     
@@ -106,7 +104,7 @@ struct MapView: View {
                         }
                         
                     }
-                    .background(Color.black.opacity(0.06).ignoresSafeArea())
+//                    .background(Color.black.opacity(0.06).ignoresSafeArea())
                 }
                 
             }else{
@@ -115,9 +113,9 @@ struct MapView: View {
             }
         }
         .onAppear {
-            if medData.NearMedModels.isEmpty {
+            if medDataModel.NearMedModels.isEmpty {
                 DispatchQueue.main.async {
-                    medData.downloadCSVOnline()
+                    medDataModel.downloadCSVOnline()
                 }
             }
         }
@@ -127,9 +125,9 @@ struct MapView: View {
 
 struct gmapView: UIViewRepresentable {
     
-    @StateObject var medData = MedData()
+    @ObservedObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
-    @State var coordinator = Coordinator()
+//    @State var coordinator = Coordinator()
     
     typealias UIViewType = GMSMapView
     
@@ -137,12 +135,17 @@ struct gmapView: UIViewRepresentable {
         
         let camera = GMSCameraPosition.camera(withTarget: locationManager.userPosition, zoom: 18)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+        let zoom = calculateZoom(radius: Float(medDataModel.radius))
         
+        mapView.delegate = context.coordinator
         mapView.setMinZoom(13, maxZoom: 23)
-        //        mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
-        mapView.animate(toZoom: 14.8)
+        mapView.animate(toZoom: zoom)
+        
+        // 300  16.5  // 700 1.7 // 800 1  //
+        // 1000 14.8
+        // 1800 13.9
         //        mapView.addObserver(coordinator, forKeyPath: "myLocation", options: .new, context: nil)
         
         
@@ -152,18 +155,23 @@ struct gmapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: GMSMapView, context: Context) {
         
-        print("Button status: \(medData.isStopUpdate)")
+//        print("Button status: \(medDataModel.isStopUpdate)")
+        print(uiView.camera.zoom)
         
-        if medData.isStopUpdate {
+        if medDataModel.isStopUpdate {
+            
             return
-        } else if locationManager.pastUserPosition.latitude != locationManager.userPosition.latitude && locationManager.pastUserPosition.longitude != locationManager.userPosition.longitude && !medData.isStopUpdate {
+            
+        } else if locationManager.pastUserPosition.latitude != locationManager.userPosition.latitude && locationManager.pastUserPosition.longitude != locationManager.userPosition.longitude && !medDataModel.isStopUpdate {
+            
+            let zoom = calculateZoom(radius: Float(medDataModel.radius))
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 
                 uiView.clear()
-                uiView.camera = GMSCameraPosition.camera(withTarget: locationManager.userPosition, zoom: 14.8)
+                uiView.camera = GMSCameraPosition.camera(withTarget: locationManager.userPosition, zoom: zoom)
                 
-                let circle = GMSCircle(position: locationManager.userPosition, radius: CLLocationDistance(medData.radius))
+                let circle = GMSCircle(position: locationManager.userPosition, radius: CLLocationDistance(medDataModel.radius))
                 circle.fillColor = UIColor(white: 0.7, alpha: 0.3)
                 circle.strokeWidth = 3
                 circle.strokeColor = .orange
@@ -171,47 +179,68 @@ struct gmapView: UIViewRepresentable {
                 
                 count += 1
                 
-                if medData.NearMedModels.isEmpty {
-                    medData.downloadCSVOnline()
+                if medDataModel.NearMedModels.isEmpty {
+                    medDataModel.downloadCSVOnline()
                 }
                 
-                let nearData = medData.SortedNearMedModels
+                let nearData = medDataModel.SortedNearMedModels
                 
                 for i in 0..<nearData.count {
                     
                     let MedLat = nearData[i].medPlaceLat
                     let MedLng = nearData[i].medPlaceLon
                     let MedTitle = nearData[i].medName
-                    let MedSubtitle = nearData[i].medStoreNumber
+                    let MedAddress = nearData[i].medAddress
+                    let MedStoreNumber = nearData[i].medStoreNumber
+                    let MedRemarks = nearData[i].medRemarks
                     let MedDistance = nearData[i].medDistance
+                    let MedUpdateTime = nearData[i].medUpdateTime
                     let MedPosition = CLLocationCoordinate2D(latitude: MedLat, longitude: MedLng)
                     
                     let MedMarker = GMSMarker()
                     MedMarker.position = MedPosition
-                    MedMarker.icon = i == 0 ? createOrangePin(Int(MedSubtitle)!) : createImage(Int(MedSubtitle)!)
+                    MedMarker.icon = i == 0 ? createOrangePin(Int(MedStoreNumber)!) : createImage(Int(MedStoreNumber)!)
                     if i == 0 { MedMarker.zIndex = 1 }
                     MedMarker.map = uiView
-                    MedMarker.title = "藥局：\(MedTitle)"
-                    MedMarker.snippet = "快篩數量：\(MedSubtitle), 距離：\(Int(MedDistance))m"
+                    MedMarker.title = "[快篩] x\(MedStoreNumber)  (@\(MedTitle))"
+                    MedMarker.snippet = "距離：\(Int(MedDistance))m\n地址：\(MedAddress)\n備註：\(MedRemarks)\n更新時間：\(MedUpdateTime)"
                     MedMarker.accessibilityLabel = "\(i)"
+                    MedMarker.tracksInfoWindowChanges = false
                     
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    medData.isStopUpdate = true
+                    medDataModel.isStopUpdate = true
                 }
             }
         }
     }
     
-    func makeCoordinator() -> gmapView.Coordinator {
-        return coordinator
+    func makeCoordinator() -> Coordinator {
+        Coordinator(owner: self)
     }
     
     //    static func dismantleUIView(_ uiView: GMSMapView, coordinator: Coordinator) {
     //        uiView.removeObserver(coordinator, forKeyPath: "myLocation")
     //    }
     
-    final class Coordinator: NSObject {
+    final class Coordinator: NSObject, GMSMapViewDelegate {
+        
+        let owner: gmapView
+        
+        init(owner: gmapView){
+            self.owner = owner
+        }
+        
+        func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+
+        }
+        
+//        func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+//            let callout = UIHostingController(rootView: MarkerView())
+//            callout.view.frame = CGRect(x: 0, y: 0, width: mapView.frame.width - 60, height: 200)
+//            return callout.view
+//        }
+        
         override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
             if let location = change?[.newKey] as? CLLocation, let mapView = object as? GMSMapView {
                 mapView.animate(toLocation: location.coordinate)
@@ -221,6 +250,28 @@ struct gmapView: UIViewRepresentable {
     
     // -x => Move Left, +x => Move Right
     // -y => Move up, +y => Move down
+    
+    // Float(16.5 - (medDataModel.radius - 300) * 0.0017)
+    
+    func calculateZoom(radius: Float) -> Float {
+        
+        var zoomValue: Float = 0
+        
+        if radius >= 300 && radius <= 500 {
+            zoomValue = 16.5 - ((radius - 300) * 0.004)
+        }
+        else if radius > 500 && radius < 1000 {
+            zoomValue = 15.8 - ((radius - 500) * 0.002)
+        }
+        else if radius >= 1000 && radius < 1200 {
+            zoomValue = 14.8 - ((radius - 1000) * 0.001)
+        }
+        else if radius >= 1200 && radius <= 1800 {
+            zoomValue = 14.5 - ((radius - 1200) * 0.001)
+        }
+        
+        return Float(zoomValue)
+    }
     
     func createOrangePin(_ count: Int) -> UIImage {
         

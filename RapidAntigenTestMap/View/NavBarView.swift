@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavBarView: View {
     
-    @StateObject var medData = MedData()
+    @StateObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
     
     @State var title: String = ""
@@ -27,11 +27,14 @@ struct NavBarView: View {
             Spacer()
             
             Button {
-                medData.NearMedModels.removeAll()
-                medData.SortedNearMedModels.removeAll()
+                medDataModel.NearMedModels.removeAll()
+                medDataModel.SortedNearMedModels.removeAll()
+                medDataModel.isStopUpdate = false
                 DispatchQueue.main.async {
-                    medData.downloadCSVOnline()
+                    medDataModel.downloadCSVOnline()
                 }
+                
+                print("currentRadius: \(medDataModel.radius)")
 
             } label: {
                 Image(systemName: "arrow.triangle.2.circlepath")
