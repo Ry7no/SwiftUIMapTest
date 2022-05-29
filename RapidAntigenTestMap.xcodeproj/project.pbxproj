@@ -64,9 +64,6 @@
 		35708732BC015A83354ECB1B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DFC20A1B7C9692371C85098 /* Pods-RapidAntigenTestMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.debug.xcconfig"; sourceTree = "<group>"; };
 		51DBA2F22843D262001F904B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
-		51DBA2F52843D262001F904B /* AccountAuthenticationModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthenticationModificationViewController.swift; sourceTree = "<group>"; };
-		51DBA2F82843D262001F904B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		51DBA2FA2843D262001F904B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51F36A3F2841B906003BFF8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		51F36A412841BDE5003BFF8C /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		51F36A4328427D46003BFF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -122,16 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51DBA2F42843D262001F904B /* 快篩地圖 */ = {
-			isa = PBXGroup;
-			children = (
-				51DBA2F52843D262001F904B /* AccountAuthenticationModificationViewController.swift */,
-				51DBA2F72843D262001F904B /* MainInterface.storyboard */,
-				51DBA2FA2843D262001F904B /* Info.plist */,
-			);
-			path = "快篩地圖";
-			sourceTree = "<group>";
-		};
 		BEBEC76CE36940A0CB5DC77B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +149,6 @@
 				FD30CEFA283D14810025EE66 /* RapidAntigenTestMap */,
 				FD30CF0B283D14830025EE66 /* RapidAntigenTestMapTests */,
 				FD30CF15283D14830025EE66 /* RapidAntigenTestMapUITests */,
-				51DBA2F42843D262001F904B /* 快篩地圖 */,
 				FD30CEF9283D14810025EE66 /* Products */,
 				BEBEC76CE36940A0CB5DC77B /* Pods */,
 				DFD6DA0D24CADB67363A4C2B /* Frameworks */,
@@ -533,17 +519,6 @@
 			targetProxy = FD30CF13283D14830025EE66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		51DBA2F72843D262001F904B /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51DBA2F82843D262001F904B /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FD30CF1A283D14830025EE66 /* Debug */ = {
