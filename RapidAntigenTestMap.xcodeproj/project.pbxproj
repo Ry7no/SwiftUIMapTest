@@ -45,11 +45,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		51DBA3012843D262001F904B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D876B0640EC148C11FC6AEC /* Pods-RapidAntigenTestMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap.release.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.release.xcconfig"; sourceTree = "<group>"; };
 		2A2571B7809F91E8EF9EFF49 /* Pods-RapidAntigenTestMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMapTests.release.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		35708732BC015A83354ECB1B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DFC20A1B7C9692371C85098 /* Pods-RapidAntigenTestMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.debug.xcconfig"; sourceTree = "<group>"; };
+		51DBA2F22843D262001F904B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		51DBA2F52843D262001F904B /* AccountAuthenticationModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthenticationModificationViewController.swift; sourceTree = "<group>"; };
+		51DBA2F82843D262001F904B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		51DBA2FA2843D262001F904B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51F36A3F2841B906003BFF8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		51F36A412841BDE5003BFF8C /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		51F36A4328427D46003BFF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +122,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51DBA2F42843D262001F904B /* 快篩地圖 */ = {
+			isa = PBXGroup;
+			children = (
+				51DBA2F52843D262001F904B /* AccountAuthenticationModificationViewController.swift */,
+				51DBA2F72843D262001F904B /* MainInterface.storyboard */,
+				51DBA2FA2843D262001F904B /* Info.plist */,
+			);
+			path = "快篩地圖";
+			sourceTree = "<group>";
+		};
 		BEBEC76CE36940A0CB5DC77B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +151,7 @@
 				C0B1A7307E318BE210F2A6C3 /* Pods_RapidAntigenTestMap.framework */,
 				A799B846CB01607FD6835D49 /* Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework */,
 				8612C27CB22077BE6EF28DCF /* Pods_RapidAntigenTestMapTests.framework */,
+				51DBA2F22843D262001F904B /* AuthenticationServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +162,7 @@
 				FD30CEFA283D14810025EE66 /* RapidAntigenTestMap */,
 				FD30CF0B283D14830025EE66 /* RapidAntigenTestMapTests */,
 				FD30CF15283D14830025EE66 /* RapidAntigenTestMapUITests */,
+				51DBA2F42843D262001F904B /* 快篩地圖 */,
 				FD30CEF9283D14810025EE66 /* Products */,
 				BEBEC76CE36940A0CB5DC77B /* Pods */,
 				DFD6DA0D24CADB67363A4C2B /* Frameworks */,
@@ -232,6 +261,7 @@
 				FD30CEF5283D14810025EE66 /* Frameworks */,
 				FD30CEF6283D14810025EE66 /* Resources */,
 				DC99B5116E2BDA2CA7D43DBA /* [CP] Copy Pods Resources */,
+				51DBA3012843D262001F904B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -288,7 +318,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					FD30CEF7283D14810025EE66 = {
@@ -504,6 +534,17 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		51DBA2F72843D262001F904B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51DBA2F82843D262001F904B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		FD30CF1A283D14830025EE66 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -623,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DFC20A1B7C9692371C85098 /* Pods-RapidAntigenTestMap.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -656,6 +698,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D876B0640EC148C11FC6AEC /* Pods-RapidAntigenTestMap.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

@@ -41,7 +41,7 @@ struct TabBarView: View {
                                 .offset(x: 20, y: -12)
                                 .background(
                                     Circle()
-                                        .fill(medDataModel.sortedNumber == 0 ? .white.opacity(0) : .green)
+                                        .fill(medDataModel.sortedNumber == 0 ? .white.opacity(0) : .orange)
                                         .frame(width: 20, height: 20)
                                         .offset(x: 20, y: -12 )
                                 )
