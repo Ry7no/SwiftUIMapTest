@@ -649,6 +649,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RapidAntigenTestMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Always and When In Use Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -683,6 +684,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RapidAntigenTestMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Always and When In Use Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
