@@ -114,15 +114,22 @@ struct gmapView: UIViewRepresentable {
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         let zoom = calculateZoom(radius: Float(medDataModel.radius))
         
-        do {
-          // Set the map style by passing the URL of the local file.
-          if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
-            mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-          } else {
-            NSLog("Unable to find style.json")
-          }
-        } catch {
-          NSLog("One or more of the map styles failed to load. \(error)")
+        if #available(iOS 13.0, *) {
+            
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                
+                do {
+                  // Set the map style by passing the URL of the local file.
+                  if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                    mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                  } else {
+                    NSLog("Unable to find style.json")
+                  }
+                } catch {
+                  NSLog("One or more of the map styles failed to load. \(error)")
+                }
+                
+            }
         }
         
         mapView.delegate = context.coordinator
@@ -134,9 +141,7 @@ struct gmapView: UIViewRepresentable {
         // 300  16.5  // 700 1.7 // 800 1  //
         // 1000 14.8
         // 1800 13.9
-        //        mapView.addObserver(coordinator, forKeyPath: "myLocation", options: .new, context: nil)
-        
-        
+
         return mapView
     }
 
