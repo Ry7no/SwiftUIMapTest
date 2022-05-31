@@ -8,6 +8,7 @@
 import SwiftUI
 import GoogleMaps
 import MapKit
+import UIKit
 
 
 struct MapView: View {
@@ -226,7 +227,46 @@ struct gmapView: UIViewRepresentable {
         
         func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
 
+            let latDouble = Double(marker.position.latitude)
+            let longDouble = Double(marker.position.longitude)
+            
+            showalert(msg: "注意")
+
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {  //if phone has an app
+                
+                if let url = URL(string: "comgooglemaps-x-callback://?saddr=&daddr=\(latDouble),\(longDouble)&directionsmode=driving") {
+                    UIApplication.shared.open(url, options: [:])
+                }}
+            else {
+                //Open in browser
+                if let urlDestination = URL.init(string: "https://www.google.co.in/maps/dir/?saddr=&daddr=\(latDouble),\(longDouble)&directionsmode=driving") {
+                    UIApplication.shared.open(urlDestination)
+                }
+            }
         }
+        
+        func showalert(msg:String) {
+            let alertController = UIAlertController(
+                title: "提示",
+                message: msg,
+                preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(
+                title: "確認",
+                style: .default,
+                handler: {
+                    (action: UIAlertAction!) -> Void in
+                    //print("按下確認後，閉包裡的動作")
+                    
+                })
+            alertController.addAction(okAction)
+            
+//            self.present(
+//                alertController,
+//                animated: true,
+//                completion: nil)
+        }
+
         
 //        func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
 //            let callout = UIHostingController(rootView: MarkerView())

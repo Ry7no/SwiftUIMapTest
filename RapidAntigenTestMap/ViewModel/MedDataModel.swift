@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import GoogleMaps
 import GoogleMapsCore
+import UIKit
 
 class MedDataModel: ObservableObject {
     
