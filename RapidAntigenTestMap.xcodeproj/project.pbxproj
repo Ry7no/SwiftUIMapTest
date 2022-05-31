@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 51C44A992845DD3E00C1F4F0 /* style.json */; };
 		51F36A402841B906003BFF8C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A3F2841B906003BFF8C /* SettingsView.swift */; };
 		51F36A422841BDE5003BFF8C /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A412841BDE5003BFF8C /* NavBarView.swift */; };
 		A186D61D8124E126B79E74B2 /* Pods_RapidAntigenTestMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612C27CB22077BE6EF28DCF /* Pods_RapidAntigenTestMapTests.framework */; };
@@ -63,6 +64,7 @@
 		2A2571B7809F91E8EF9EFF49 /* Pods-RapidAntigenTestMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMapTests.release.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMapTests/Pods-RapidAntigenTestMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		35708732BC015A83354ECB1B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DFC20A1B7C9692371C85098 /* Pods-RapidAntigenTestMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.debug.xcconfig"; sourceTree = "<group>"; };
+		51C44A992845DD3E00C1F4F0 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		51DBA2F22843D262001F904B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		51F36A3F2841B906003BFF8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		51F36A412841BDE5003BFF8C /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				FD30CEFB283D14810025EE66 /* RapidAntigenTestMapApp.swift */,
 				FD30CEFD283D14810025EE66 /* ContentView.swift */,
 				FD30CEFF283D14820025EE66 /* Assets.xcassets */,
+				51C44A992845DD3E00C1F4F0 /* style.json */,
 				FD30CF01283D14820025EE66 /* Preview Content */,
 			);
 			path = RapidAntigenTestMap;
@@ -345,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */,
 				FD30CF03283D14820025EE66 /* Preview Assets.xcassets in Resources */,
 				FD30CF00283D14820025EE66 /* Assets.xcassets in Resources */,
 			);
@@ -662,7 +666,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -698,7 +702,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

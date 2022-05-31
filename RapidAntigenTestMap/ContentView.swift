@@ -10,6 +10,7 @@ import GoogleMaps
 
 struct ContentView: View {
     
+    
     @ObservedObject var locationManager = LocationManager()
 //    @ObservedObject var medDataModel = MedDataModel()
 //    @State var sortedNumber = 0

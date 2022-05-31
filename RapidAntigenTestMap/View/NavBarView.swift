@@ -45,7 +45,7 @@ struct NavBarView: View {
             }
         }
         .padding()
-        .background(Color.white.ignoresSafeArea(.all, edges: .top))
+        .background(Color("NavBg").ignoresSafeArea(.all, edges: .top))
     }
 }
 

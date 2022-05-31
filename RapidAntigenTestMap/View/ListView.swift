@@ -53,8 +53,10 @@ struct ListView: View {
                                     HStack {
                                         
                                         Text("\(Int(Meds[i].medDistance))m")
+                                            .minimumScaleFactor(0.2)
+                                            .lineLimit(1)
                                             .font(.headline)
-                                            .fontWeight(.medium)
+//                                            .fontWeight(.medium)
                                             .foregroundColor(i == 0 ? Color.white :Color.black)
                                             .frame(width: 55, height: 55, alignment: .center)
                                             .background(i == 0 ? Color.red :Color.white)
@@ -74,6 +76,7 @@ struct ListView: View {
                                         }
                                         
                                         Text("快篩剩 \(Meds[i].medStoreNumber)")
+                                            .minimumScaleFactor(0.2)
                                             .font(.headline)
                                             .foregroundColor(.white)
                                             .frame(width: 100, height: 55, alignment: .center)
@@ -87,6 +90,7 @@ struct ListView: View {
                                             .foregroundColor(.blue)
                                         Text("電話：\(Meds[i].medPhone)")
                                             .font(.body)
+                                            .minimumScaleFactor(0.2)
                                         Spacer()
                                         
                                     }
@@ -98,6 +102,7 @@ struct ListView: View {
                                             .foregroundColor(.purple)
                                         Text("地址：\(Meds[i].medAddress)")
                                             .font(.body)
+                                            .minimumScaleFactor(0.2)
                                         Spacer()
                                         
                                     }
@@ -108,6 +113,7 @@ struct ListView: View {
                                             .foregroundColor(.pink)
                                         Text("備註：\(Meds[i].medRemarks)")
                                             .font(.body)
+                                            .minimumScaleFactor(0.2)
                                         Spacer()
                                         
                                     }

@@ -10,7 +10,6 @@ import GoogleMaps
 import MapKit
 
 
-
 struct MapView: View {
     
     @ObservedObject var medDataModel = MedDataModel()
@@ -78,29 +77,6 @@ struct MapView: View {
                                 
                             }
                             
-
-                                
-//                                Button {
-//  
-//                                    if !medData.isStopUpdate {
-//                                        medData.isStopUpdate = true
-//                                        isStop = true
-//                                    } else {
-//                                        medData.isStopUpdate = false
-//                                        isStop = false
-//                                    }
-//                                    
-//                                } label: {
-//                                    Text(medData.isStopUpdate ? "Hold" : "Updating..")
-//                                        .font(.title3)
-//                                        .fontWeight(.bold)
-//                                }
-//                                .padding()
-//                                .tint(medData.isStopUpdate ? .red : .green)
-//                                .refreshable {
-//                                    
-//                                }
-                            
                         }
                         
                     }
@@ -125,6 +101,7 @@ struct MapView: View {
 
 struct gmapView: UIViewRepresentable {
     
+//    var colorScheme: ColorScheme
     @ObservedObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
 //    @State var coordinator = Coordinator()
@@ -136,6 +113,17 @@ struct gmapView: UIViewRepresentable {
         let camera = GMSCameraPosition.camera(withTarget: locationManager.userPosition, zoom: 18)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         let zoom = calculateZoom(radius: Float(medDataModel.radius))
+        
+        do {
+          // Set the map style by passing the URL of the local file.
+          if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+            mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+          } else {
+            NSLog("Unable to find style.json")
+          }
+        } catch {
+          NSLog("One or more of the map styles failed to load. \(error)")
+        }
         
         mapView.delegate = context.coordinator
         mapView.setMinZoom(13, maxZoom: 23)
