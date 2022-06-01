@@ -229,8 +229,6 @@ struct gmapView: UIViewRepresentable {
 
             let latDouble = Double(marker.position.latitude)
             let longDouble = Double(marker.position.longitude)
-            
-            showalert(msg: "注意")
 
             if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {  //if phone has an app
                 
@@ -244,29 +242,6 @@ struct gmapView: UIViewRepresentable {
                 }
             }
         }
-        
-        func showalert(msg:String) {
-            let alertController = UIAlertController(
-                title: "提示",
-                message: msg,
-                preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(
-                title: "確認",
-                style: .default,
-                handler: {
-                    (action: UIAlertAction!) -> Void in
-                    //print("按下確認後，閉包裡的動作")
-                    
-                })
-            alertController.addAction(okAction)
-            
-//            self.present(
-//                alertController,
-//                animated: true,
-//                completion: nil)
-        }
-
         
 //        func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
 //            let callout = UIHostingController(rootView: MarkerView())
