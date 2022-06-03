@@ -655,8 +655,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RapidAntigenTestMap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資料，是否允許此App獲取您的定位？";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資料，是否允許此App獲取您的定位？";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -691,8 +691,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RapidAntigenTestMap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資料，是否允許此App獲取您的定位？";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資料，是否允許此App獲取您的定位？";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
