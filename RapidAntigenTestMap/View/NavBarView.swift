@@ -14,6 +14,9 @@ struct NavBarView: View {
     
     @State var title: String = ""
     
+    let myDate = Date()
+    let weekday = Calendar.current.component(.weekday, from: Date())
+    
     var body: some View {
         
         HStack {
@@ -26,6 +29,49 @@ struct NavBarView: View {
             
             Spacer()
             
+            ZStack {
+                if weekday == 1 {
+                    
+                    Text("全")
+                        .font(.title3)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.green)
+                        .frame(width: 30, height: 30)
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(.green, lineWidth: 2)
+                        )
+                    
+                } else if  weekday == 2 || weekday == 4 || weekday == 6 {
+                    
+                    Text("單")
+                        .font(.title3)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.orange)
+                        .frame(width: 30, height: 30)
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.orange, lineWidth: 2)
+                        )
+                    
+                } else {
+                    
+                    Text("雙")
+                        .font(.title3)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.cyan)
+                        .frame(width: 30, height: 30)
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.cyan, lineWidth: 2)
+                        )
+                    
+                }
+            }
+            
             Button {
                 medDataModel.NearMedModels.removeAll()
                 medDataModel.SortedNearMedModels.removeAll()
@@ -35,6 +81,7 @@ struct NavBarView: View {
                 }
                 
                 print("currentRadius: \(medDataModel.radius)")
+                print("\(weekday)")
 
             } label: {
                 Image(systemName: "arrow.triangle.2.circlepath")

@@ -30,13 +30,13 @@ struct ContentView: View {
             
             TabView(selection: $currentTab) {
                 
-                ListView(medDataModel: medDataModel)
+                ListView(medDataModel: medDataModel, currentTab: $currentTab)
                     .tag(Tab.list)
                 
                 MapView(medDataModel: medDataModel)
                     .tag(Tab.map)
                 
-                SettingsView(medDataModel: medDataModel)
+                SettingsView(medDataModel: medDataModel, currentTab: $currentTab)
                     .tag(Tab.settings)
             }
             

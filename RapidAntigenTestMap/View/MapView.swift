@@ -18,6 +18,9 @@ struct MapView: View {
     //    @EnvironmentObject var medData: MedData
     
     @State var isStop = false
+    @State var timeRemaining = 10
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var showAlert = false
     
     var body: some View {
         
@@ -36,11 +39,29 @@ struct MapView: View {
                         ProgressView()
                             .tint(.green)
                             .scaleEffect(x: 2, y: 2, anchor: .center)
+                        
                         Text("Loading...")
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(.green)
                             .padding()
+                            .offset(y: 3)
+                        
+                        Text("\(timeRemaining)")
+                            .font(.title3)
+                            .foregroundColor(.green)
+                            .frame(width: 30, height: 30)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.green, lineWidth: 2)
+                            )
+                            .offset(y: -10)
+                            .onReceive(timer) { _ in
+                                if timeRemaining > 0 {
+                                    timeRemaining -= 1
+                                }
+                            }
                         
                         Spacer()
                         

@@ -10,9 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     
     @ObservedObject var medDataModel: MedDataModel
-    
-//    @Binding var radius: MedData.radius
-//    @State var offset: CGFloat = 0
+
+    @Binding var currentTab: Tab
     @State var maxRadius: CGFloat = 1800
     @State var radiusValue: CGFloat = 1000
     
@@ -74,6 +73,13 @@ struct SettingsView: View {
                     .accentColor(.green)
                 
                 Button {
+                    currentTab = .list
+                    medDataModel.NearMedModels.removeAll()
+                    medDataModel.SortedNearMedModels.removeAll()
+                    medDataModel.isStopUpdate = false
+                    DispatchQueue.main.async {
+                        medDataModel.downloadCSVOnline()
+                    }
                     print("currentRadius: \(medDataModel.radius)")
                 } label: {
                     Text("確認修改")

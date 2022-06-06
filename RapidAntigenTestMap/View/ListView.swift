@@ -12,8 +12,15 @@ struct ListView: View {
     @ObservedObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
     
-    @GestureState var gestureOffset: CGFloat = 0
-    @State var offsetY: CGFloat = 0
+//    @GestureState var gestureOffset: CGFloat = 0
+//    @State var offsetY: CGFloat = 0
+    
+    @State var timeRemaining = 10
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State var showAlert = false
+    
+    @Binding var currentTab: Tab
     
     var body: some View {
         
@@ -30,11 +37,50 @@ struct ListView: View {
                     ProgressView()
                         .tint(.green)
                         .scaleEffect(x: 2, y: 2, anchor: .center)
+                    
                     Text("Loading...")
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.green)
                         .padding()
+                        .offset(y: 3)
+                        .alert("附近搜尋不到相關藥局", isPresented: $showAlert, actions: {
+                            Button("重新搜尋") {
+                                timeRemaining = 10
+                                showAlert = false
+                                medDataModel.NearMedModels.removeAll()
+                                medDataModel.SortedNearMedModels.removeAll()
+                                medDataModel.isStopUpdate = false
+                                DispatchQueue.main.async {
+                                    medDataModel.downloadCSVOnline()
+                                }
+                            }
+                            Button("調整範圍"){
+                                timeRemaining = 15
+                                showAlert = false
+                                currentTab = .settings
+                            }
+                        }, message: {
+                            Text("\n請檢查連線重試一次 或 調整搜尋半徑")
+                        })
+  
+                    Text("\(timeRemaining)")
+                        .font(.title3)
+                        .foregroundColor(.green)
+                        .frame(width: 30, height: 30)
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.green, lineWidth: 2)
+                        )
+                        .offset(y: -10)
+                        .onReceive(timer) { _ in
+                            if timeRemaining > 0 {
+                                timeRemaining -= 1
+                            } else if timeRemaining == 0 {
+                                showAlert = true
+                            }
+                        }
                     
                     Spacer()
                     
@@ -74,14 +120,56 @@ struct ListView: View {
                                                 .frame(width: 25, height: 25)
                                                 .foregroundColor(Color("DarkOrange"))
                                         }
+
+                                        if Meds[i].medBrand == "羅氏家用新冠病毒抗原自我檢測套組" {
+                                            Text("羅")
+                                                .font(.headline)
+                                                .frame(width: 25, height: 25, alignment: .center)
+                                                .foregroundColor(.blue)
+                                                .background(.white)
+                                                .cornerRadius(8)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 8)
+                                                        .stroke(Color.blue, lineWidth: 2)
+                                                )
+                                        }
                                         
-                                        Text("快篩剩 \(Meds[i].medStoreNumber)")
-                                            .minimumScaleFactor(0.2)
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                            .frame(width: 100, height: 55, alignment: .center)
-                                            .background(i == 0 ? Color("DarkRed") : Color("Navy"))
-                                            .cornerRadius(18)
+                                        
+//                                        VStack (spacing: 4){
+//
+//                                            Text("\(Meds[i].medBrand.components(separatedBy: " ").first)")
+//                                                .font(.headline)
+//                                                .frame(width: 25, height: 25, alignment: .center)
+//                                                .foregroundColor(.blue)
+//                                                .background(.white)
+//                                                .cornerRadius(8)
+//                                                .overlay(
+//                                                    RoundedRectangle(cornerRadius: 8)
+//                                                        .stroke(Color.blue, lineWidth: 2)
+//                                                )
+//
+//                                            Text("亞")
+//                                                .font(.headline)
+//                                                .frame(width: 25, height: 25, alignment: .center)
+//                                                .foregroundColor(.indigo)
+//                                                .background(.white)
+//                                                .cornerRadius(8)
+//                                                .overlay(
+//                                                    RoundedRectangle(cornerRadius: 8)
+//                                                        .stroke(Color.indigo, lineWidth: 2)
+//                                                )
+//                                            }
+                                            
+                                            Text("快篩剩 \(Meds[i].medStoreNumber)")
+                                                .minimumScaleFactor(0.2)
+                                                .font(.headline)
+                                                .foregroundColor(.white)
+                                                .frame(width: 100, height: 55, alignment: .center)
+                                                .background(i == 0 ? Color("DarkRed") : Color("Navy"))
+                                                .cornerRadius(18)
+                                            
+                                        
+    
                                     }
                                     
                                     HStack (alignment: .top) {
@@ -92,6 +180,7 @@ struct ListView: View {
                                             .font(.body)
                                             .minimumScaleFactor(0.2)
                                         Spacer()
+                                        
                                         
                                     }
                                     .padding([.top],10)
@@ -129,13 +218,6 @@ struct ListView: View {
                             }
                         }// List End
                         .listStyle(.inset)
-                        
-//                        if gestureOffset > 80 {
-//                            ProgressView()
-//                                .tint(.green)
-//                                .scaleEffect(x: 2, y: 2, anchor: .center)
-//                                .padding(.top, 40)
-//                        }
                     
                 }
                 
@@ -157,8 +239,8 @@ struct ListView: View {
     }
 }
 
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
-    }
-}
+//struct ListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListView()
+//    }
+//}
