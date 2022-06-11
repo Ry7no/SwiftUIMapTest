@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HUD: View {
     
@@ -69,8 +70,6 @@ extension View{
 
 struct HUDView: View {
     
-//    @EnvironmentObject var sharedData: SharedDataModel
-    
     var image: String
     var color: Color
     var title: String
@@ -94,7 +93,7 @@ struct HUDView: View {
         .padding(.vertical, 10)
         .padding(.horizontal)
         .background(
-//            MaterialEffect(style: .systemThinMaterial) //scheme == .dark
+            //            MaterialEffect(style: .systemThinMaterial) //scheme == .dark
             scheme == .dark ? Color.green.opacity(0.9) : Color("DarkScheme").opacity(0.9)
         )
         .clipShape(Capsule())
@@ -132,4 +131,8 @@ extension View{
     }
 }
 
-
+extension UIScreen{
+   static let screenWidth = UIScreen.main.bounds.size.width
+   static let screenHeight = UIScreen.main.bounds.size.height
+   static let screenSize = UIScreen.main.bounds.size
+}

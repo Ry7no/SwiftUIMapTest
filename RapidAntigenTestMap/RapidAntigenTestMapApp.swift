@@ -15,11 +15,9 @@ struct RapidAntigenTestMapApp: App {
         GMSServices.provideAPIKey("AIzaSyBp74yPDJDGIHB2UxeGQ6URF6j83JEInDs")
     }
     
-    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(MedDataModel())
+            SplashScreenView()
         }
     }
 }

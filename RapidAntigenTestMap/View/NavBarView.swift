@@ -42,7 +42,7 @@ struct NavBarView: View {
             
 //            ZStack {
 //                if weekday == 1 {
-//                    
+//
 //                    Text("全")
 //                        .font(.title3)
 //                        .fontWeight(.heavy)
@@ -53,9 +53,9 @@ struct NavBarView: View {
 //                            RoundedRectangle(cornerRadius: 8)
 //                                .stroke(.green, lineWidth: 2)
 //                        )
-//                    
+//
 //                } else if  weekday == 2 || weekday == 4 || weekday == 6 {
-//                    
+//
 //                    Text("單")
 //                        .font(.title3)
 //                        .fontWeight(.heavy)
@@ -66,9 +66,9 @@ struct NavBarView: View {
 //                            RoundedRectangle(cornerRadius: 8)
 //                                .stroke(Color.orange, lineWidth: 2)
 //                        )
-//                    
+//
 //                } else {
-//                    
+//
 //                    Text("雙")
 //                        .font(.title3)
 //                        .fontWeight(.heavy)
@@ -79,7 +79,7 @@ struct NavBarView: View {
 //                            RoundedRectangle(cornerRadius: 8)
 //                                .stroke(Color.cyan, lineWidth: 2)
 //                        )
-//                    
+//
 //                }
 //            }
             

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		51788D0528521FD4009CB1D2 /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51788D0428521FD4009CB1D2 /* HUDView.swift */; };
+		51788D0A2854A285009CB1D2 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51788D092854A285009CB1D2 /* GifImage.swift */; };
+		51788D0C2854A76F009CB1D2 /* IconMove.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51788D0B2854A76F009CB1D2 /* IconMove.gif */; };
+		51788D0E2854F472009CB1D2 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51788D0D2854F472009CB1D2 /* SplashScreenView.swift */; };
 		51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 51C44A992845DD3E00C1F4F0 /* style.json */; };
 		51F36A402841B906003BFF8C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A3F2841B906003BFF8C /* SettingsView.swift */; };
 		51F36A422841BDE5003BFF8C /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A412841BDE5003BFF8C /* NavBarView.swift */; };
@@ -66,6 +69,9 @@
 		35708732BC015A83354ECB1B /* Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DFC20A1B7C9692371C85098 /* Pods-RapidAntigenTestMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidAntigenTestMap.debug.xcconfig"; path = "Target Support Files/Pods-RapidAntigenTestMap/Pods-RapidAntigenTestMap.debug.xcconfig"; sourceTree = "<group>"; };
 		51788D0428521FD4009CB1D2 /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		51788D092854A285009CB1D2 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		51788D0B2854A76F009CB1D2 /* IconMove.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = IconMove.gif; sourceTree = "<group>"; };
+		51788D0D2854F472009CB1D2 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		51C44A992845DD3E00C1F4F0 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		51DBA2F22843D262001F904B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		51F36A3F2841B906003BFF8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				51F36A4328427D46003BFF8C /* Info.plist */,
+				51788D0B2854A76F009CB1D2 /* IconMove.gif */,
 				FD30CF27283FB7130025EE66 /* Model */,
 				FD30CF2A283FB7C60025EE66 /* ViewModel */,
 				FD30CF2C283FB7E00025EE66 /* View */,
@@ -236,7 +243,9 @@
 				FD30CF30283FBA060025EE66 /* MapView.swift */,
 				FD30CF32283FBBB80025EE66 /* ListView.swift */,
 				51F36A3F2841B906003BFF8C /* SettingsView.swift */,
+				51788D0D2854F472009CB1D2 /* SplashScreenView.swift */,
 				51788D0428521FD4009CB1D2 /* HUDView.swift */,
+				51788D092854A285009CB1D2 /* GifImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +344,8 @@
 				Base,
 			);
 			mainGroup = FD30CEEF283D14810025EE66;
+			packageReferences = (
+			);
 			productRefGroup = FD30CEF9283D14810025EE66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51788D0C2854A76F009CB1D2 /* IconMove.gif in Resources */,
 				51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */,
 				FD30CF03283D14820025EE66 /* Preview Assets.xcassets in Resources */,
 				FD30CF00283D14820025EE66 /* Assets.xcassets in Resources */,
@@ -483,6 +495,7 @@
 			files = (
 				51788D0528521FD4009CB1D2 /* HUDView.swift in Sources */,
 				FD30CF29283FB78D0025EE66 /* PharmacyData.swift in Sources */,
+				51788D0E2854F472009CB1D2 /* SplashScreenView.swift in Sources */,
 				FD30CF35283FBC0F0025EE66 /* MedDataModel.swift in Sources */,
 				FD30CF39283FBE0E0025EE66 /* TabBarView.swift in Sources */,
 				FD30CEFE283D14810025EE66 /* ContentView.swift in Sources */,
@@ -491,6 +504,7 @@
 				51F36A402841B906003BFF8C /* SettingsView.swift in Sources */,
 				FD30CF31283FBA060025EE66 /* MapView.swift in Sources */,
 				FD30CF2E283FB8110025EE66 /* Tab.swift in Sources */,
+				51788D0A2854A285009CB1D2 /* GifImage.swift in Sources */,
 				FD30CEFC283D14810025EE66 /* RapidAntigenTestMapApp.swift in Sources */,
 				FD30CF3B283FD28A0025EE66 /* LocationManager.swift in Sources */,
 			);
@@ -652,7 +666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
@@ -676,7 +690,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -689,7 +703,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
@@ -713,7 +727,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
