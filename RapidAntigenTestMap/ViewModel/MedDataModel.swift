@@ -156,9 +156,9 @@ class MedDataModel: ObservableObject {
     SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
     sortedNumber = SortedNearMedModels.count
         
-    print("NEAR: \(NearMedModels.count)")
+//    print("NEAR: \(NearMedModels.count)")
     print("SORTEDNEAR: \(sortedNumber)")
-    print("NEAREST: \(NearestMed.count)")
+//    print("NEAREST: \(NearestMed.count)")
         
     }
     

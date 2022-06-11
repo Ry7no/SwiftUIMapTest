@@ -80,6 +80,12 @@ struct SettingsView: View {
                     DispatchQueue.main.async {
                         medDataModel.downloadCSVOnline()
                     }
+                    if Int(medDataModel.radius) == 1000 {
+                        showHUD(image: "checkmark.diamond", title: "搜尋半徑維持\(Int(medDataModel.radius))m") {_,_ in }
+                    } else {
+                        showHUD(image: "checkmark.diamond", title: "搜尋半徑改為\(Int(medDataModel.radius))m") {_,_ in }
+                    }
+                    
                     print("currentRadius: \(medDataModel.radius)")
                 } label: {
                     Text("確認修改")

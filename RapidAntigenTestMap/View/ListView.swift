@@ -230,10 +230,11 @@ struct ListView: View {
         .onAppear {
             if medDataModel.NearMedModels.isEmpty {
                 DispatchQueue.main.async {
+                    timeRemaining = 10
                     medDataModel.downloadCSVOnline()
+                    
                 }
             }
-            
         }
         
     }

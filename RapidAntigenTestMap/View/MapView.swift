@@ -111,6 +111,14 @@ struct MapView: View {
             }
         }
         .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                showHUD(image: "checkmark.diamond", title: "共搜尋到\(Int(medDataModel.sortedNumber))家") { status, msg in
+                    if !status {
+                        print(msg)
+                    }
+                }
+            }
+            
             if medDataModel.NearMedModels.isEmpty {
                 DispatchQueue.main.async {
                     medDataModel.downloadCSVOnline()
@@ -149,8 +157,7 @@ struct gmapView: UIViewRepresentable {
                   }
                 } catch {
                   NSLog("One or more of the map styles failed to load. \(error)")
-                }
-                
+                }    
             }
         }
         
@@ -171,7 +178,7 @@ struct gmapView: UIViewRepresentable {
     func updateUIView(_ uiView: GMSMapView, context: Context) {
         
 //        print("Button status: \(medDataModel.isStopUpdate)")
-        print(uiView.camera.zoom)
+//        print(uiView.camera.zoom)
         
         if medDataModel.isStopUpdate {
             
