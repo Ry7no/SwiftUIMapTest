@@ -41,7 +41,6 @@ struct ContentView: View {
                 DispatchQueue.main.async {
                     print("\(locationManager.userPosition)")
                 }
-
         }
         .environmentObject(medDataModel)
     }

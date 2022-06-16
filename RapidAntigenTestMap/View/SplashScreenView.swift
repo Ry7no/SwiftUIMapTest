@@ -11,6 +11,14 @@ struct SplashScreenView: View {
     
     @State private var isActive = false
     
+    // Balls Animation States
+    @State var ball1MoveY = -100.0
+    @State var ball2MoveY = 100.0
+    @State var scale = 1.0
+    @State var ball1Degree = 0.0
+    @State var ball2Degree = 0.0
+    @State var bgColor = Color.clear
+    
     @State var size = 0.9
     @State var opacity = 0.6
     @State var moveX = 0.0
@@ -24,12 +32,12 @@ struct SplashScreenView: View {
         } else {
             
             VStack {
-                
+
                 VStack {
-                    
+
                 Text("")
                     .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 4)
-                GifImage("IconMove")
+                GifImage("ShootAndShake100")
                     .background(Color("AppGreen"))
                     .offset(x: moveX)
                     .onAppear {
@@ -50,8 +58,17 @@ struct SplashScreenView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("AppGreen"))
             .onAppear{
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    self.isActive = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {
+                    withAnimation {
+                        self.size = 80
+                        self.opacity = 0.05
+                    }
+                }
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.2) {
+                    withAnimation {
+                        self.isActive = true
+                    }
                 }
             }
         }
@@ -63,3 +80,22 @@ struct SplashScreenView_Previews: PreviewProvider {
         SplashScreenView()
     }
 }
+
+//                Circle()
+//                    .fill(Color("AppGreen"))
+//                    .frame(width: 20, height: 20)
+//                    .scaleEffect(CGFloat(scale))
+//                    .offset(y: ball1MoveY)
+//                    .rotation3DEffect(.degrees(Double(ball1Degree)), axis: (x: 0.5, y: 0, z: 0))
+//                    .onAppear() {
+//                        withAnimation(.easeInOut.speed(0.5)) {
+//                            ball1MoveY += 200
+//                            scale += 5
+//                            ball1Degree = 90
+//                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                                withAnimation {
+//                                    bgColor = Color("AppGreen")
+//                                }
+//                            }
+//                        }
+//                    }

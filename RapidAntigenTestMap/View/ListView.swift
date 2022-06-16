@@ -19,6 +19,10 @@ struct ListView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State var showAlert = false
+//    @State var scale = 1.0
+    @State var color = Color("DarkOrange")
+    
+    @Environment(\.colorScheme) var scheme
     
     @Binding var currentTab: Tab
     
@@ -103,9 +107,9 @@ struct ListView: View {
                                             .lineLimit(1)
                                             .font(.headline)
 //                                            .fontWeight(.medium)
-                                            .foregroundColor(i == 0 ? Color.white :Color.black)
+                                            .foregroundColor(i == 0 ? Color.white : (scheme == .dark ? .white : .black))
                                             .frame(width: 55, height: 55, alignment: .center)
-                                            .background(i == 0 ? Color.red :Color.white)
+                                            .background(i == 0 ? Color.red : (scheme == .dark ? .black : .white))
                                             .cornerRadius(18)
                                             .padding([.trailing], 10)
                                         
@@ -115,24 +119,33 @@ struct ListView: View {
                                         
                                         Spacer()
                                         
-                                        if Int(Meds[i].medStoreNumber) ?? 0 <= 100 {
-                                            Image(systemName: "star.fill")
-                                                .frame(width: 25, height: 25)
-                                                .foregroundColor(Color("DarkOrange"))
-                                        }
-
-                                        if Meds[i].medBrand == "羅氏家用新冠病毒抗原自我檢測套組" {
-                                            Text("羅")
-                                                .font(.headline)
-                                                .frame(width: 25, height: 25, alignment: .center)
-                                                .foregroundColor(.blue)
-                                                .background(.white)
-                                                .cornerRadius(8)
-                                                .overlay(
-                                                    RoundedRectangle(cornerRadius: 8)
-                                                        .stroke(Color.blue, lineWidth: 2)
-                                                )
-                                        }
+                                            
+                                            if Int(Meds[i].medStoreNumber) ?? 0 <= 100 {
+                                                Image(systemName: "star.fill")
+                                                    .frame(width: 25, height: 25)
+                                                    .foregroundColor(color)
+//                                                    .scaleEffect(CGFloat(scale))
+                                                    .onAppear {
+                                                        withAnimation(.easeInOut.speed(0.8).repeatForever()) {
+//                                                            scale += 0.1
+                                                            color = Color("YellowReverse")
+                                                        }
+                                                    }
+                                                
+                                            } else if Meds[i].medBrand == "羅氏家用新冠病毒抗原自我檢測套組" {
+                                                Text("羅")
+                                                    .font(.headline)
+                                                    .frame(width: 25, height: 25, alignment: .center)
+                                                    .foregroundColor(scheme == .dark ? .white : .blue)
+                                                    .background(scheme == .dark ? .clear : .white)
+                                                    .cornerRadius(8)
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 8)
+                                                            .stroke(scheme == .dark ? .white : .blue, lineWidth: 2)
+                                                    )
+                                            }
+                                    
+                                        
                                         
                                         
 //                                        VStack (spacing: 4){

@@ -224,7 +224,7 @@ struct gmapView: UIViewRepresentable {
                     MedMarker.icon = i == 0 ? createOrangePin(Int(MedStoreNumber)!) : createImage(Int(MedStoreNumber)!)
                     if i == 0 { MedMarker.zIndex = 1 }
                     MedMarker.map = uiView
-                    MedMarker.title = "[快篩] x\(MedStoreNumber)  (@\(MedTitle))"
+                    MedMarker.title = Int(MedStoreNumber)! < 100 ? "[快篩] x\(MedStoreNumber)⭐︎  (@\(MedTitle))" : "[快篩] x\(MedStoreNumber)  (@\(MedTitle))"
                     MedMarker.snippet = "距離：\(Int(MedDistance))m\n地址：\(MedAddress)\n備註：\(MedRemarks)\n更新時間：\(MedUpdateTime)"
                     MedMarker.accessibilityLabel = "\(i)"
                     MedMarker.tracksInfoWindowChanges = false
@@ -311,9 +311,9 @@ struct gmapView: UIViewRepresentable {
     
     func createOrangePin(_ count: Int) -> UIImage {
         
-        let color = count > 200 ? UIColor.black : UIColor.red
+        let color = count > 100 ? UIColor.black : UIColor.red
         // select needed color
-        let string = "\(UInt(count))"
+        let string = count < 100 ? " \(UInt(count))" : "\(UInt(count))"
         // the string to colorize
         let attrs: [NSAttributedString.Key: Any] = [.foregroundColor: color, .font: UIFont.boldSystemFont(ofSize: 14)]
         let attrStr = NSAttributedString(string: string, attributes: attrs)
@@ -335,9 +335,9 @@ struct gmapView: UIViewRepresentable {
     
     func createImage(_ count: Int) -> UIImage {
         
-        let color = count > 200 ? UIColor.black : UIColor.red
+        let color = count > 100 ? UIColor.black : UIColor.red
         // select needed color
-        let string = "\(UInt(count))"
+        let string = count < 100 ? " \(UInt(count))" : "\(UInt(count))"
         // the string to colorize
         let attrs: [NSAttributedString.Key: Any] = [.foregroundColor: color, .font: UIFont.systemFont(ofSize: 12)]
         let attrStr = NSAttributedString(string: string, attributes: attrs)

@@ -11,6 +11,7 @@
 		51788D0A2854A285009CB1D2 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51788D092854A285009CB1D2 /* GifImage.swift */; };
 		51788D0C2854A76F009CB1D2 /* IconMove.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51788D0B2854A76F009CB1D2 /* IconMove.gif */; };
 		51788D0E2854F472009CB1D2 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51788D0D2854F472009CB1D2 /* SplashScreenView.swift */; };
+		51788D30285A344D009CB1D2 /* ShootAndShake100.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51788D2F285A344D009CB1D2 /* ShootAndShake100.gif */; };
 		51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 51C44A992845DD3E00C1F4F0 /* style.json */; };
 		51F36A402841B906003BFF8C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A3F2841B906003BFF8C /* SettingsView.swift */; };
 		51F36A422841BDE5003BFF8C /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F36A412841BDE5003BFF8C /* NavBarView.swift */; };
@@ -72,6 +73,7 @@
 		51788D092854A285009CB1D2 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		51788D0B2854A76F009CB1D2 /* IconMove.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = IconMove.gif; sourceTree = "<group>"; };
 		51788D0D2854F472009CB1D2 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		51788D2F285A344D009CB1D2 /* ShootAndShake100.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ShootAndShake100.gif; sourceTree = "<group>"; };
 		51C44A992845DD3E00C1F4F0 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		51DBA2F22843D262001F904B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		51F36A3F2841B906003BFF8C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				51F36A4328427D46003BFF8C /* Info.plist */,
 				51788D0B2854A76F009CB1D2 /* IconMove.gif */,
+				51788D2F285A344D009CB1D2 /* ShootAndShake100.gif */,
 				FD30CF27283FB7130025EE66 /* Model */,
 				FD30CF2A283FB7C60025EE66 /* ViewModel */,
 				FD30CF2C283FB7E00025EE66 /* View */,
@@ -364,6 +367,7 @@
 			files = (
 				51788D0C2854A76F009CB1D2 /* IconMove.gif in Resources */,
 				51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */,
+				51788D30285A344D009CB1D2 /* ShootAndShake100.gif in Resources */,
 				FD30CF03283D14820025EE66 /* Preview Assets.xcassets in Resources */,
 				FD30CF00283D14820025EE66 /* Assets.xcassets in Resources */,
 			);
@@ -666,7 +670,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
@@ -685,7 +689,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -703,7 +707,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
@@ -722,7 +726,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
