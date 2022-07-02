@@ -29,17 +29,19 @@ struct NavBarView: View {
             
             Spacer()
             
-            Text("全")
-                .font(.title3)
-                .fontWeight(.heavy)
-                .foregroundColor(.green)
-                .frame(width: 30, height: 30)
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.green, lineWidth: 2)
-                )
+            // MARK: 移除全
+//            Text("全")
+//                .font(.title3)
+//                .fontWeight(.heavy)
+//                .foregroundColor(.green)
+//                .frame(width: 30, height: 30)
+//                .cornerRadius(8)
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 8)
+//                        .stroke(.green, lineWidth: 2)
+//                )
             
+            // MARK: 移除判斷單雙數
 //            ZStack {
 //                if weekday == 1 {
 //
@@ -90,10 +92,6 @@ struct NavBarView: View {
                 DispatchQueue.main.async {
                     medDataModel.downloadCSVOnline()
                 }
-                
-//                print("currentRadius: \(medDataModel.radius)")
-//                print("\(weekday)")
-
             } label: {
                 Image(systemName: "arrow.triangle.2.circlepath")
                     .resizable()

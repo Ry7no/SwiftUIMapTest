@@ -12,6 +12,8 @@ import GoogleMaps
 import GoogleMapsCore
 import UIKit
 
+// https://quality.data.gov.tw/dq_download_csv.php?nid=143682&md5_url=2423561b169c47ff60a52e3bd773372b
+
 class MedDataModel: ObservableObject {
     
     @ObservedObject var locationManager = LocationManager()
