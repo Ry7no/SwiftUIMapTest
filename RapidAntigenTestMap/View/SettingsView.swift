@@ -12,7 +12,7 @@ struct SettingsView: View {
     @ObservedObject var medDataModel: MedDataModel
 
     @Binding var currentTab: Tab
-    @State var maxRadius: CGFloat = 1800
+//    @State var maxRadius: CGFloat = 1800
     @State var radiusValue: CGFloat = 1000
     
 //    var maxBarLength = UIScreen.main.bounds.width - 65
@@ -71,6 +71,7 @@ struct SettingsView: View {
                 
                 Slider(value: $medDataModel.radius, in: 300...1800)
                     .accentColor(.green)
+                    .padding(.vertical, 20)
                 
                 Button {
                     currentTab = .list
@@ -92,12 +93,14 @@ struct SettingsView: View {
                         .fontWeight(.bold)
                         .font(.title2)
                         .foregroundColor(.white)
+                        .frame(width: UIScreen.main.bounds.width / 2.5, height: 45)
+                        .background(Color.green.clipShape(RoundedRectangle(cornerRadius: 10)))
                 }
-                .tint(.green)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
-                .buttonStyle(.borderedProminent)
-                .controlSize(.regular)
+                
+//                .buttonStyle(.borderedProminent)
+//                .controlSize(.regular)
                 
                 Spacer()
     

@@ -9,7 +9,7 @@ import SwiftUI
 import GoogleMaps
 import MapKit
 import UIKit
-
+import GoogleMapsUtils
 
 struct MapView: View {
     
@@ -126,6 +126,7 @@ struct MapView: View {
             }
         }
     }
+
     
 }
 
@@ -135,6 +136,8 @@ struct gmapView: UIViewRepresentable {
     @ObservedObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
 //    @State var coordinator = Coordinator()
+    
+//    @State var clusterManager: GMUClusterManager!
     
     typealias UIViewType = GMSMapView
     
@@ -160,6 +163,14 @@ struct gmapView: UIViewRepresentable {
                 }    
             }
         }
+        
+//        let iconGenerator = GMUDefaultClusterIconGenerator()
+//        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
+//        let renderer = GMUDefaultClusterRenderer(mapView: mapView,
+//                                                 clusterIconGenerator: iconGenerator)
+//        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm,
+//                                           renderer: renderer)
+
         
         mapView.delegate = context.coordinator
         mapView.setMinZoom(13, maxZoom: 23)
@@ -207,6 +218,8 @@ struct gmapView: UIViewRepresentable {
                 
                 let nearData = medDataModel.SortedNearMedModels
                 
+//                clusterManager.clearItems()
+                
                 for i in 0..<nearData.count {
                     
                     let MedLat = nearData[i].medPlaceLat
@@ -228,10 +241,11 @@ struct gmapView: UIViewRepresentable {
                     MedMarker.snippet = "距離：\(Int(MedDistance))m\n地址：\(MedAddress)\n備註：\(MedRemarks)\n更新時間：\(MedUpdateTime)"
                     MedMarker.accessibilityLabel = "\(i)"
                     MedMarker.tracksInfoWindowChanges = false
-                    
+//                    clusterManager.add(MedMarker)
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     medDataModel.isStopUpdate = true
+//                    clusterManager.cluster()
                 }
             }
         }

@@ -90,7 +90,7 @@ struct ListView: View {
                     
                 } else {
                         
-                        List (0..<Meds.count){ i in
+                        List (0..<Meds.count) { i in
                             
                             Button {
                                 
@@ -109,6 +109,7 @@ struct ListView: View {
 //                                            .fontWeight(.medium)
                                             .foregroundColor(i == 0 ? Color.white : (scheme == .dark ? .white : .black))
                                             .frame(width: 55, height: 55, alignment: .center)
+//                                            .background(.ultraThinMaterial)
                                             .background(i == 0 ? Color.red : (scheme == .dark ? .black : .white))
                                             .cornerRadius(18)
                                             .padding([.trailing], 10)
@@ -222,6 +223,7 @@ struct ListView: View {
                                     
                                 }
                                 .padding()
+                                .background(.ultraThinMaterial)
                                 .background(i == 0 ? Color("Yellow").opacity(0.7) : Color("Green").opacity(0.4))
                                 .cornerRadius(18)
                                 .overlay(
@@ -255,6 +257,6 @@ struct ListView: View {
 
 //struct ListView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        ListView()
+//        ListView(, currentTab: <#Binding<Tab>#>)
 //    }
 //}

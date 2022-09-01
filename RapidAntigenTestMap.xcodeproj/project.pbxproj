@@ -32,6 +32,12 @@
 		FD30CF35283FBC0F0025EE66 /* MedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */; };
 		FD30CF39283FBE0E0025EE66 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF38283FBE0E0025EE66 /* TabBarView.swift */; };
 		FD30CF3B283FD28A0025EE66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF3A283FD28A0025EE66 /* LocationManager.swift */; };
+		FD6B3D5E28BF47B500949C52 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D5D28BF47B500949C52 /* FirebaseAnalytics */; };
+		FD6B3D6028BF47B500949C52 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D5F28BF47B500949C52 /* FirebaseAnalyticsSwift */; };
+		FD6B3D6228BF47B500949C52 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D6128BF47B500949C52 /* FirebaseCrashlytics */; };
+		FD6B3D6428BF47B500949C52 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D6328BF47B500949C52 /* FirebasePerformance */; };
+		FD6B3D6628BF489F00949C52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD6B3D6528BF489E00949C52 /* GoogleService-Info.plist */; };
+		FD6B3D6828BF4AC000949C52 /* MyFlyLocationMutatable.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +107,8 @@
 		FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedDataModel.swift; sourceTree = "<group>"; };
 		FD30CF38283FBE0E0025EE66 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		FD30CF3A283FD28A0025EE66 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FD6B3D6528BF489E00949C52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MyFlyLocationMutatable.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6B3D6028BF47B500949C52 /* FirebaseAnalyticsSwift in Frameworks */,
+				FD6B3D6228BF47B500949C52 /* FirebaseCrashlytics in Frameworks */,
+				FD6B3D6428BF47B500949C52 /* FirebasePerformance in Frameworks */,
+				FD6B3D5E28BF47B500949C52 /* FirebaseAnalytics in Frameworks */,
 				CDF4382D18CF13281817E96B /* Pods_RapidAntigenTestMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +192,7 @@
 		FD30CEFA283D14810025EE66 /* RapidAntigenTestMap */ = {
 			isa = PBXGroup;
 			children = (
+				FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */,
 				51F36A4328427D46003BFF8C /* Info.plist */,
 				51788D0B2854A76F009CB1D2 /* IconMove.gif */,
 				51788D2F285A344D009CB1D2 /* ShootAndShake100.gif */,
@@ -189,6 +202,7 @@
 				FD30CEFB283D14810025EE66 /* RapidAntigenTestMapApp.swift */,
 				FD30CEFD283D14810025EE66 /* ContentView.swift */,
 				FD30CEFF283D14820025EE66 /* Assets.xcassets */,
+				FD6B3D6528BF489E00949C52 /* GoogleService-Info.plist */,
 				51C44A992845DD3E00C1F4F0 /* style.json */,
 				FD30CF01283D14820025EE66 /* Preview Content */,
 			);
@@ -272,6 +286,12 @@
 			dependencies = (
 			);
 			name = RapidAntigenTestMap;
+			packageProductDependencies = (
+				FD6B3D5D28BF47B500949C52 /* FirebaseAnalytics */,
+				FD6B3D5F28BF47B500949C52 /* FirebaseAnalyticsSwift */,
+				FD6B3D6128BF47B500949C52 /* FirebaseCrashlytics */,
+				FD6B3D6328BF47B500949C52 /* FirebasePerformance */,
+			);
 			productName = RapidAntigenTestMap;
 			productReference = FD30CEF8283D14810025EE66 /* RapidAntigenTestMap.app */;
 			productType = "com.apple.product-type.application";
@@ -348,6 +368,7 @@
 			);
 			mainGroup = FD30CEEF283D14810025EE66;
 			packageReferences = (
+				FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FD30CEF9283D14810025EE66 /* Products */;
 			projectDirPath = "";
@@ -366,10 +387,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				51788D0C2854A76F009CB1D2 /* IconMove.gif in Resources */,
+				FD6B3D6828BF4AC000949C52 /* MyFlyLocationMutatable.gpx in Resources */,
 				51C44A9A2845DD3E00C1F4F0 /* style.json in Resources */,
 				51788D30285A344D009CB1D2 /* ShootAndShake100.gif in Resources */,
 				FD30CF03283D14820025EE66 /* Preview Assets.xcassets in Resources */,
 				FD30CF00283D14820025EE66 /* Assets.xcassets in Resources */,
+				FD6B3D6628BF489F00949C52 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,13 +693,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RapidAntigenTestMap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -689,7 +713,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -707,13 +731,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RapidAntigenTestMap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近藥局相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -726,7 +751,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -740,7 +765,6 @@
 			baseConfigurationReference = B91AE80C4D0DCAAAFADD92E2 /* Pods-RapidAntigenTestMapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48394HVWDA;
@@ -761,7 +785,6 @@
 			baseConfigurationReference = 2A2571B7809F91E8EF9EFF49 /* Pods-RapidAntigenTestMapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48394HVWDA;
@@ -855,6 +878,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD6B3D5D28BF47B500949C52 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FD6B3D5F28BF47B500949C52 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		FD6B3D6128BF47B500949C52 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		FD6B3D6328BF47B500949C52 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD30CEF0283D14810025EE66 /* Project object */;
 }

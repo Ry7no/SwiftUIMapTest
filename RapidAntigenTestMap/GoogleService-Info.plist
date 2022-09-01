@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>301721371540-ci3egem2rhscnq4d0sikbu7jl2t0hr3i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.301721371540-ci3egem2rhscnq4d0sikbu7jl2t0hr3i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCTHLYLI2DRBWQcIBaa8LSrZpzSP9w2u_E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>301721371540</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.novachens.RapidAntigenTestMap</string>
+	<key>PROJECT_ID</key>
+	<string>rapidantigenmap</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rapidantigenmap.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:301721371540:ios:cdb40a022f6f9bc6c78581</string>
+</dict>
+</plist>

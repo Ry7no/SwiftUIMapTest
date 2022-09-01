@@ -21,8 +21,7 @@ class MedDataModel: ObservableObject {
     @Published var MedModels = [MedModel]()
     @Published var NearMedModels: [MedModel] = []
     @Published var SortedNearMedModels: [MedModel] = []
-    @Published var NearestMed: [MedModel] = []
-    
+   
     @Published var radius: CGFloat = 1000
     @Published var isStopUpdate: Bool = false
     @Published var sortedNumber: Int = 0
@@ -147,12 +146,6 @@ class MedDataModel: ObservableObject {
                 if distanceBetween < radius {
                     MedModels[i].medDistance = distanceBetween
                     NearMedModels.append(MedModels[i])
-                    
-                    if pastDistance > distanceBetween {
-                        pastDistance = distanceBetween
-                        NearestMed.removeAll()
-                        NearestMed.append(MedModels[i])
-                    }
                 }
             }
     SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
@@ -160,7 +153,6 @@ class MedDataModel: ObservableObject {
         
 //    print("NEAR: \(NearMedModels.count)")
     print("SORTEDNEAR: \(sortedNumber)")
-//    print("NEAREST: \(NearestMed.count)")
         
     }
     

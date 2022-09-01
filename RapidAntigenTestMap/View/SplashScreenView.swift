@@ -35,16 +35,17 @@ struct SplashScreenView: View {
 
                 VStack {
 
-                Text("")
-                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 4)
-                GifImage("ShootAndShake100")
-                    .background(Color("AppGreen"))
-                    .offset(x: moveX)
-                    .onAppear {
-                        withAnimation(.easeInOut(duration: 6).speed(3.5)) {
-                            self.moveX = UIScreen.screenWidth / 4 - 10
+                    Text("")
+                        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight / 3.5)
+                    
+                    GifImage("ShootAndShake100")
+                        .background(Color("AppGreen"))
+                        .offset(x: moveX)
+                        .onAppear {
+                            withAnimation(.easeInOut(duration: 6).speed(3.5)) {
+                                self.moveX = UIScreen.screenWidth / 4 - 10
+                            }
                         }
-                    }
                 }
                 .scaleEffect(size)
                 .opacity(opacity)
@@ -56,6 +57,7 @@ struct SplashScreenView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea()
             .background(Color("AppGreen"))
             .onAppear{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {

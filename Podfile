@@ -7,6 +7,7 @@ target 'RapidAntigenTestMap' do
 
   # Pods for RapidAntigenTestMap
   pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
 
   target 'RapidAntigenTestMapTests' do
     inherit! :search_paths

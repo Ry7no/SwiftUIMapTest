@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="mapstogpx.com" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.mapstogpx.com">
+      <text>FakeGPS</text>
+    </link>
+    <time>2022-08-03T12:13:33Z</time>
+  </metadata>
+  
+  <wpt lat = "25.0284593" lon = "121.5715944">
+<!-- 三商電腦股份有限公司/@25.0284593,121.5715944  地址：信義區信義路五段150巷2號 -->
+  
+<!--  <wpt lat = "24.828109" lon = "121.011221">-->
+<!-- 新竹縣政府消防局局本部/@24.8281031,121.0109809  地址：新竹縣竹北市光明五街295號 -->
+
+<!--  <wpt lat = "24.8281588" lon = "121.010735">-->
+<!--土地銀行竹北分行/@24.828429,121.0106445-->
+
+    <name>MyFlyLocation</name>
+  </wpt>
+</gpx>

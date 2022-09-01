@@ -7,6 +7,7 @@
 
 import SwiftUI
 import GoogleMaps
+import FirebaseCore
 
 struct ContentView: View {
 
