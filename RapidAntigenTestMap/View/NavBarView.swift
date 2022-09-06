@@ -12,6 +12,9 @@ struct NavBarView: View {
     @StateObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
     
+    @AppStorage("isNewList") var isNewList: Bool = DefaultSettings.isNewList
+    @AppStorage("isExpanding") var isExpanding: Bool = DefaultSettings.isExpanding
+
     @State var title: String = ""
     
     let myDate = Date()
@@ -28,62 +31,30 @@ struct NavBarView: View {
                 .shadow(color: .black, radius: 0.2, x: 0.2, y: 0.2)
             
             Spacer()
-            
-            // MARK: 移除全
-//            Text("全")
-//                .font(.title3)
-//                .fontWeight(.heavy)
-//                .foregroundColor(.green)
-//                .frame(width: 30, height: 30)
-//                .cornerRadius(8)
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 8)
-//                        .stroke(.green, lineWidth: 2)
-//                )
-            
-            // MARK: 移除判斷單雙數
-//            ZStack {
-//                if weekday == 1 {
-//
-//                    Text("全")
-//                        .font(.title3)
-//                        .fontWeight(.heavy)
-//                        .foregroundColor(.green)
-//                        .frame(width: 30, height: 30)
-//                        .cornerRadius(8)
-//                        .overlay(
-//                            RoundedRectangle(cornerRadius: 8)
-//                                .stroke(.green, lineWidth: 2)
-//                        )
-//
-//                } else if  weekday == 2 || weekday == 4 || weekday == 6 {
-//
-//                    Text("單")
-//                        .font(.title3)
-//                        .fontWeight(.heavy)
-//                        .foregroundColor(.orange)
-//                        .frame(width: 30, height: 30)
-//                        .cornerRadius(8)
-//                        .overlay(
-//                            RoundedRectangle(cornerRadius: 8)
-//                                .stroke(Color.orange, lineWidth: 2)
-//                        )
-//
-//                } else {
-//
-//                    Text("雙")
-//                        .font(.title3)
-//                        .fontWeight(.heavy)
-//                        .foregroundColor(.cyan)
-//                        .frame(width: 30, height: 30)
-//                        .cornerRadius(8)
-//                        .overlay(
-//                            RoundedRectangle(cornerRadius: 8)
-//                                .stroke(Color.cyan, lineWidth: 2)
-//                        )
-//
-//                }
+//            VStack {
+//                Text("avg: \(locationManager.avgSpeed.string(fractionDigits: 0))km/h")
+//                    .font(.system(size: 20))
+//                
+//                Text("spd: \(locationManager.speedInt)km/h")
+//                    .font(.system(size: 20))
 //            }
+            
+            Button {
+                withAnimation {
+                    isExpanding.toggle()
+                }
+            } label: {
+                Image(systemName: isExpanding ? "rectangle.compress.vertical" : "rectangle.expand.vertical")
+                    .font(.system(size: 20, weight: .bold))
+                    .frame(width: 22, height: 22)
+                    .padding(10)
+                    .tint(.white)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10).foregroundColor(isExpanding ? .green : .orange)
+                    }
+            }
+            .offset(x: 5)
+            .opacity(title == "鄰近藥局清單" && isNewList ? 1 : 0)
             
             Button {
                 medDataModel.NearMedModels.removeAll()
@@ -94,14 +65,18 @@ struct NavBarView: View {
                 }
             } label: {
                 Image(systemName: "arrow.triangle.2.circlepath")
-                    .resizable()
-                    .frame(width: 28, height: 24)
+                    .font(.system(size: 24, weight: .semibold))
+//                    .resizable()
+                    .frame(width: 26, height: 25)
                     .padding()
                     .tint(.green)
             }
         }
         .padding()
         .background(Color("NavBg").ignoresSafeArea(.all, edges: .top))
+        .onAppear {
+            print("isExpanding: \(isExpanding)")
+        }
     }
 }
 

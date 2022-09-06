@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @AppStorage("isNewList") var isNewList: Bool = DefaultSettings.isNewList
+    
     @ObservedObject var medDataModel: MedDataModel
 
     @Binding var currentTab: Tab
@@ -51,8 +53,6 @@ struct SettingsView: View {
             .background(Color("NavBg").ignoresSafeArea(.all, edges: .top))
             
             VStack (alignment: .leading) {
-                
-//                Spacer()
                 
                 HStack {
                     Text("地圖範圍(半徑)")
@@ -101,15 +101,32 @@ struct SettingsView: View {
                 
 //                .buttonStyle(.borderedProminent)
 //                .controlSize(.regular)
-                
-                Spacer()
     
             }
             .padding()
-            
+            .background(.ultraThinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .padding(.horizontal, 15)
             
 
+            Toggle(isOn: $isNewList) {
+                Text("新式表單")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.green)
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.ultraThinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .padding(.horizontal, 15)
+            .padding(.vertical, 10)
+            
+//
+
             Spacer()
+            
+            
         
         }
 //        .background(Color.black.opacity(0.06).ignoresSafeArea())

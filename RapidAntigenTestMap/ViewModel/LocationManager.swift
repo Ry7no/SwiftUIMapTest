@@ -52,6 +52,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         let locationValue: CLLocationCoordinate2D = manager.location!.coordinate
         pastUserPosition = userPosition
         userPosition = locationValue
+
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

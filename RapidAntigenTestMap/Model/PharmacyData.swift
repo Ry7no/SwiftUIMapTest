@@ -10,6 +10,11 @@ import GoogleMaps
 
 var count = 0
 
+enum DefaultSettings {
+    static let isNewList = false
+    static let isExpanding = false
+}
+
 // 台北松菸：25.044633, 121.559722
 // 基隆長庚：25.120521, 121.722713
 // 台北北醫：25.024898, 121.561204
