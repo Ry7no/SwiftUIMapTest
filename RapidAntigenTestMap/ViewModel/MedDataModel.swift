@@ -11,6 +11,7 @@ import CoreLocation
 import GoogleMaps
 import GoogleMapsCore
 import UIKit
+import WidgetKit
 
 // https://quality.data.gov.tw/dq_download_csv.php?nid=143682&md5_url=2423561b169c47ff60a52e3bd773372b
 
@@ -148,12 +149,29 @@ class MedDataModel: ObservableObject {
                     NearMedModels.append(MedModels[i])
                 }
             }
-    SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
-    sortedNumber = SortedNearMedModels.count
         
-//    print("NEAR: \(NearMedModels.count)")
-    print("SORTEDNEAR: \(sortedNumber)")
+        SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
+        sortedNumber = SortedNearMedModels.count
         
+        //    print("NEAR: \(NearMedModels.count)")
+        print("SORTEDNEAR: \(sortedNumber)")
+        
+        let nearestName = SortedNearMedModels[0].medName
+        let nearestAddress = SortedNearMedModels[0].medAddress
+        let nearestPhone = SortedNearMedModels[0].medPhone
+        let nearestStoreNumber = SortedNearMedModels[0].medStoreNumber
+        let nearestDistance = Int(SortedNearMedModels[0].medDistance)
+        let nearestUpdateTime = SortedNearMedModels[0].medUpdateTime
+        
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestName, forKey: "nearestName")
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestAddress, forKey: "nearestAddress")
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestPhone, forKey: "nearestPhone")
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestStoreNumber, forKey: "nearestStoreNumber")
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestDistance, forKey: "nearestDistance")
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestUpdateTime, forKey: "nearestUpdateTime")
+        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(sortedNumber, forKey: "totalCount")
+        
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
 }

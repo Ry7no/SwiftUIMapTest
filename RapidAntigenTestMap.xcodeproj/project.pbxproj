@@ -32,12 +32,20 @@
 		FD30CF35283FBC0F0025EE66 /* MedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */; };
 		FD30CF39283FBE0E0025EE66 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF38283FBE0E0025EE66 /* TabBarView.swift */; };
 		FD30CF3B283FD28A0025EE66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30CF3A283FD28A0025EE66 /* LocationManager.swift */; };
+		FD3CD92728C73987001656CD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CD92628C73987001656CD /* WidgetKit.framework */; };
+		FD3CD92928C73987001656CD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CD92828C73987001656CD /* SwiftUI.framework */; };
+		FD3CD92C28C73987001656CD /* RapidAntigenTestMapWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CD92B28C73987001656CD /* RapidAntigenTestMapWidget.swift */; };
+		FD3CD92F28C73988001656CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3CD92E28C73988001656CD /* Assets.xcassets */; };
+		FD3CD93528C73988001656CD /* RapidAntigenTestMapWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD3CD92528C73987001656CD /* RapidAntigenTestMapWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD3CD93C28C74276001656CD /* AnnotationViewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CD93B28C74276001656CD /* AnnotationViewWidget.swift */; };
 		FD6B3D5E28BF47B500949C52 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D5D28BF47B500949C52 /* FirebaseAnalytics */; };
 		FD6B3D6028BF47B500949C52 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D5F28BF47B500949C52 /* FirebaseAnalyticsSwift */; };
 		FD6B3D6228BF47B500949C52 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D6128BF47B500949C52 /* FirebaseCrashlytics */; };
 		FD6B3D6428BF47B500949C52 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = FD6B3D6328BF47B500949C52 /* FirebasePerformance */; };
 		FD6B3D6628BF489F00949C52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD6B3D6528BF489E00949C52 /* GoogleService-Info.plist */; };
 		FD6B3D6828BF4AC000949C52 /* MyFlyLocationMutatable.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */; };
+		FD8EC4DB28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FD8EC4DE28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition */; };
+		FD8EC4DC28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FD8EC4DE28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,13 @@
 			remoteGlobalIDString = FD30CEF7283D14810025EE66;
 			remoteInfo = RapidAntigenTestMap;
 		};
+		FD3CD93328C73988001656CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD30CEF0283D14810025EE66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3CD92428C73987001656CD;
+			remoteInfo = RapidAntigenTestMapWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				FD3CD93528C73988001656CD /* RapidAntigenTestMapWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,8 +123,19 @@
 		FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedDataModel.swift; sourceTree = "<group>"; };
 		FD30CF38283FBE0E0025EE66 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		FD30CF3A283FD28A0025EE66 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FD3CD92528C73987001656CD /* RapidAntigenTestMapWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RapidAntigenTestMapWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3CD92628C73987001656CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FD3CD92828C73987001656CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FD3CD92B28C73987001656CD /* RapidAntigenTestMapWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidAntigenTestMapWidget.swift; sourceTree = "<group>"; };
+		FD3CD92E28C73988001656CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD3CD93028C73988001656CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3CD93928C739A2001656CD /* RapidAntigenTestMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RapidAntigenTestMap.entitlements; sourceTree = "<group>"; };
+		FD3CD93A28C739CB001656CD /* RapidAntigenTestMapWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RapidAntigenTestMapWidgetExtension.entitlements; sourceTree = "<group>"; };
+		FD3CD93B28C74276001656CD /* AnnotationViewWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewWidget.swift; sourceTree = "<group>"; };
 		FD6B3D6528BF489E00949C52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MyFlyLocationMutatable.gpx; sourceTree = "<group>"; };
+		FD8EC4DD28C7827F00F4E28C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/RapidAntigenTestMapWidget.intentdefinition; sourceTree = "<group>"; };
+		FD8EC4E028C7828100F4E28C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RapidAntigenTestMapWidget.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +167,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD3CD92228C73987001656CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3CD92928C73987001656CD /* SwiftUI.framework in Frameworks */,
+				FD3CD92728C73987001656CD /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -163,6 +199,8 @@
 				A799B846CB01607FD6835D49 /* Pods_RapidAntigenTestMap_RapidAntigenTestMapUITests.framework */,
 				8612C27CB22077BE6EF28DCF /* Pods_RapidAntigenTestMapTests.framework */,
 				51DBA2F22843D262001F904B /* AuthenticationServices.framework */,
+				FD3CD92628C73987001656CD /* WidgetKit.framework */,
+				FD3CD92828C73987001656CD /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,9 +208,11 @@
 		FD30CEEF283D14810025EE66 = {
 			isa = PBXGroup;
 			children = (
+				FD3CD93A28C739CB001656CD /* RapidAntigenTestMapWidgetExtension.entitlements */,
 				FD30CEFA283D14810025EE66 /* RapidAntigenTestMap */,
 				FD30CF0B283D14830025EE66 /* RapidAntigenTestMapTests */,
 				FD30CF15283D14830025EE66 /* RapidAntigenTestMapUITests */,
+				FD3CD92A28C73987001656CD /* RapidAntigenTestMapWidget */,
 				FD30CEF9283D14810025EE66 /* Products */,
 				BEBEC76CE36940A0CB5DC77B /* Pods */,
 				DFD6DA0D24CADB67363A4C2B /* Frameworks */,
@@ -185,6 +225,7 @@
 				FD30CEF8283D14810025EE66 /* RapidAntigenTestMap.app */,
 				FD30CF08283D14830025EE66 /* RapidAntigenTestMapTests.xctest */,
 				FD30CF12283D14830025EE66 /* RapidAntigenTestMapUITests.xctest */,
+				FD3CD92528C73987001656CD /* RapidAntigenTestMapWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +233,7 @@
 		FD30CEFA283D14810025EE66 /* RapidAntigenTestMap */ = {
 			isa = PBXGroup;
 			children = (
+				FD3CD93928C739A2001656CD /* RapidAntigenTestMap.entitlements */,
 				FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */,
 				51F36A4328427D46003BFF8C /* Info.plist */,
 				51788D0B2854A76F009CB1D2 /* IconMove.gif */,
@@ -267,6 +309,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FD3CD92A28C73987001656CD /* RapidAntigenTestMapWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FD3CD92B28C73987001656CD /* RapidAntigenTestMapWidget.swift */,
+				FD3CD93B28C74276001656CD /* AnnotationViewWidget.swift */,
+				FD8EC4DE28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition */,
+				FD3CD92E28C73988001656CD /* Assets.xcassets */,
+				FD3CD93028C73988001656CD /* Info.plist */,
+			);
+			path = RapidAntigenTestMapWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,10 +334,12 @@
 				FD30CEF6283D14810025EE66 /* Resources */,
 				DC99B5116E2BDA2CA7D43DBA /* [CP] Copy Pods Resources */,
 				51DBA3012843D262001F904B /* Embed App Extensions */,
+				FD8EC4EA28C8395F00F4E28C /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD3CD93428C73988001656CD /* PBXTargetDependency */,
 			);
 			name = RapidAntigenTestMap;
 			packageProductDependencies = (
@@ -335,6 +391,23 @@
 			productReference = FD30CF12283D14830025EE66 /* RapidAntigenTestMapUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FD3CD92428C73987001656CD /* RapidAntigenTestMapWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3CD93828C73988001656CD /* Build configuration list for PBXNativeTarget "RapidAntigenTestMapWidgetExtension" */;
+			buildPhases = (
+				FD3CD92128C73987001656CD /* Sources */,
+				FD3CD92228C73987001656CD /* Frameworks */,
+				FD3CD92328C73987001656CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RapidAntigenTestMapWidgetExtension;
+			productName = RapidAntigenTestMapWidgetExtension;
+			productReference = FD3CD92528C73987001656CD /* RapidAntigenTestMapWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -342,7 +415,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					FD30CEF7283D14810025EE66 = {
@@ -355,6 +428,9 @@
 					FD30CF11283D14830025EE66 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = FD30CEF7283D14810025EE66;
+					};
+					FD3CD92428C73987001656CD = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -377,6 +453,7 @@
 				FD30CEF7283D14810025EE66 /* RapidAntigenTestMap */,
 				FD30CF07283D14830025EE66 /* RapidAntigenTestMapTests */,
 				FD30CF11283D14830025EE66 /* RapidAntigenTestMapUITests */,
+				FD3CD92428C73987001656CD /* RapidAntigenTestMapWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +484,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3CD92328C73987001656CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3CD92F28C73988001656CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +598,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FD8EC4EA28C8395F00F4E28C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -531,6 +635,7 @@
 				51F36A402841B906003BFF8C /* SettingsView.swift in Sources */,
 				FD30CF31283FBA060025EE66 /* MapView.swift in Sources */,
 				FD30CF2E283FB8110025EE66 /* Tab.swift in Sources */,
+				FD8EC4DB28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */,
 				51788D0A2854A285009CB1D2 /* GifImage.swift in Sources */,
 				FD30CEFC283D14810025EE66 /* RapidAntigenTestMapApp.swift in Sources */,
 				FD30CF3B283FD28A0025EE66 /* LocationManager.swift in Sources */,
@@ -554,6 +659,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD3CD92128C73987001656CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3CD93C28C74276001656CD /* AnnotationViewWidget.swift in Sources */,
+				FD3CD92C28C73987001656CD /* RapidAntigenTestMapWidget.swift in Sources */,
+				FD8EC4DC28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -567,7 +682,24 @@
 			target = FD30CEF7283D14810025EE66 /* RapidAntigenTestMap */;
 			targetProxy = FD30CF13283D14830025EE66 /* PBXContainerItemProxy */;
 		};
+		FD3CD93428C73988001656CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3CD92428C73987001656CD /* RapidAntigenTestMapWidgetExtension */;
+			targetProxy = FD3CD93328C73988001656CD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD8EC4DE28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD8EC4DD28C7827F00F4E28C /* Base */,
+				FD8EC4E028C7828100F4E28C /* en */,
+			);
+			name = RapidAntigenTestMapWidget.intentdefinition;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FD30CF1A283D14830025EE66 /* Debug */ = {
@@ -692,8 +824,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = RapidAntigenTestMap/RapidAntigenTestMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
@@ -713,7 +847,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -730,6 +864,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = RapidAntigenTestMap/RapidAntigenTestMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
@@ -751,7 +886,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -838,6 +973,64 @@
 			};
 			name = Release;
 		};
+		FD3CD93628C73988001656CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RapidAntigenTestMapWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48394HVWDA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RapidAntigenTestMapWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap.RapidAntigenTestMapWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD3CD93728C73988001656CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RapidAntigenTestMapWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48394HVWDA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RapidAntigenTestMapWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "快篩地圖";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap.RapidAntigenTestMapWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -873,6 +1066,15 @@
 			buildConfigurations = (
 				FD30CF23283D14830025EE66 /* Debug */,
 				FD30CF24283D14830025EE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3CD93828C73988001656CD /* Build configuration list for PBXNativeTarget "RapidAntigenTestMapWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3CD93628C73988001656CD /* Debug */,
+				FD3CD93728C73988001656CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

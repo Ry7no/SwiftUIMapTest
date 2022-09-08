@@ -37,6 +37,9 @@ struct ListView: View {
     @State var buttonHeightMax: CGFloat = 220
     @State var buttonHeightMin: CGFloat = 85
     
+    @State var refresh = Refresh(started: false, released: false)
+//    @State var minusOffset: CGFloat = 0
+    
     @Environment(\.colorScheme) var scheme
     
     @Binding var currentTab: Tab
@@ -240,6 +243,37 @@ extension ListView {
             .listRowSeparator(.hidden)
         }// List End
         .listStyle(.inset)
+        .refreshable {
+            refreshData()
+        }
+
+    }
+    
+    func refreshData() {
+        
+        medDataModel.NearMedModels.removeAll()
+        medDataModel.SortedNearMedModels.removeAll()
+        medDataModel.isStopUpdate = false
+        DispatchQueue.main.async {
+            medDataModel.downloadCSVOnline()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation(.linear){
+                
+                refresh.released = false
+                refresh.started = false
+                
+//                if refresh.startOffset == refresh.offset {
+//                    refresh.released = false
+//                    refresh.started = false
+//                } else {
+//                    refresh.invalid = true
+//                }
+                
+            }
+        }
+        
     }
     
     @ViewBuilder
@@ -272,8 +306,64 @@ extension ListView {
                 .offset(x: -40, y: -100)
 
         ScrollView {
-
+            
+            GeometryReader { reader -> AnyView in
+                
+                DispatchQueue.main.async {
+                    
+                    if refresh.startOffset == 0 {
+                        refresh.startOffset = reader.frame(in: .global).minY
+                    }
+                    
+                    refresh.offset = reader.frame(in: .global).minY
+//                    minusOffset = refresh.offset - refresh.startOffset
+//                    minusOffset = minusOffset * 180 / 100
+                    
+                    if refresh.offset - refresh.startOffset > 90 && !refresh.started {
+                        
+                        refresh.started = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            let impactHeavy = UIImpactFeedbackGenerator(style: .rigid)
+                            impactHeavy.impactOccurred()
+                        }
+                    }
+                    
+                    if refresh.startOffset == refresh.offset && refresh.started && !refresh.released {
+                        withAnimation(.linear) {
+                            refresh.released = true
+                        }
+                        refreshData()
+                    }
+                    
+//                    if refresh.startOffset == refresh.offset && refresh.started && refresh.released && refresh.invalid {
+//                        refresh.invalid = false
+//                        refreshData()
+//                    }
+                }
+                
+                return AnyView(Color.black.frame(width: 0, height: 0))
+            }
+            .frame(width: 0, height: 0)
+            
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
+                
+                if refresh.started && refresh.released {
+                    
+                    ProgressView()
+                        .offset(y: 35)
+                    
+                } else {
+                    
+                    Image(systemName: "arrow.down")
+                        .font(.system(size: 16, weight: .heavy))
+                        .foregroundColor(.gray)
+                        .rotationEffect(.init(degrees: refresh.started ? 180 : 0))
+                        .offset(y: -28)
+                        .animation(.easeIn, value: refresh.started)
+                }
+                
                 VStack {
+                    
                     ForEach(meds.indices, id: \.self) { index in
                         Button {
                             locationManager.openGoogleMap(latDouble: Double(meds[index].medPlaceLat), longDouble: Double(meds[index].medPlaceLon))
@@ -284,6 +374,9 @@ extension ListView {
 
                     }
                 }
+            }
+            .offset(y: refresh.released ? 40 : -10)
+  
 
             }
         }
@@ -450,6 +543,26 @@ extension ListView {
         .padding(.top, 10)
         .blendMode(.overlay)
         .frame(maxWidth: .infinity, maxHeight: buttonHeight == buttonHeightMax ? .infinity : buttonHeightMin, alignment: .topLeading)
+        
+    }
+}
+
+struct RefreshScrollView: UIViewRepresentable {
+    
+    @Binding var refreshControl: UIRefreshControl
+    
+    func makeUIView(context: Context) -> some UIView {
+        
+        let view = UIScrollView()
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        view.showsVerticalScrollIndicator = false
+        view.refreshControl = refreshControl
+        
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
         
     }
 }
