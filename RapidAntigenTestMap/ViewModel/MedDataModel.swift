@@ -132,45 +132,51 @@ class MedDataModel: ObservableObject {
     func compareWithRadius(radius: CGFloat) {
         
         var pastDistance: CGFloat = radius
+        
         NearMedModels.removeAll()
         SortedNearMedModels.removeAll()
-        
-            for i in 0..<MedModels.count-1 {
-                
-                let userPosition = CLLocation(latitude: locationManager.userPosition.latitude, longitude: locationManager.userPosition.longitude)
-                let MedLat = MedModels[i].medPlaceLat
-                let MedLng = MedModels[i].medPlaceLon
-                let MedPosition = CLLocation(latitude: MedLat, longitude: MedLng)
-                
-                let distanceBetween = userPosition.distance(from: MedPosition).rounded()
 
-                if distanceBetween < radius {
-                    MedModels[i].medDistance = distanceBetween
-                    NearMedModels.append(MedModels[i])
-                }
+        for i in 0..<MedModels.count-1 {
+            
+            let userPosition = CLLocation(latitude: locationManager.userPosition.latitude, longitude: locationManager.userPosition.longitude)
+            let MedLat = MedModels[i].medPlaceLat
+            let MedLng = MedModels[i].medPlaceLon
+            let MedPosition = CLLocation(latitude: MedLat, longitude: MedLng)
+            
+            let distanceBetween = userPosition.distance(from: MedPosition).rounded()
+            
+            if distanceBetween < radius {
+                MedModels[i].medDistance = distanceBetween
+                NearMedModels.append(MedModels[i])
             }
-        
+        }
+
+//        SortedNearMedModels = MedModels.sorted(by: { $0.medDistance < $1.medDistance })
         SortedNearMedModels = NearMedModels.sorted(by: { $0.medDistance < $1.medDistance })
         sortedNumber = SortedNearMedModels.count
         
         //    print("NEAR: \(NearMedModels.count)")
         print("SORTEDNEAR: \(sortedNumber)")
         
-        let nearestName = SortedNearMedModels[0].medName
-        let nearestAddress = SortedNearMedModels[0].medAddress
-        let nearestPhone = SortedNearMedModels[0].medPhone
-        let nearestStoreNumber = SortedNearMedModels[0].medStoreNumber
-        let nearestDistance = Int(SortedNearMedModels[0].medDistance)
-        let nearestUpdateTime = SortedNearMedModels[0].medUpdateTime
-        
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestName, forKey: "nearestName")
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestAddress, forKey: "nearestAddress")
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestPhone, forKey: "nearestPhone")
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestStoreNumber, forKey: "nearestStoreNumber")
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestDistance, forKey: "nearestDistance")
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestUpdateTime, forKey: "nearestUpdateTime")
-        UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(sortedNumber, forKey: "totalCount")
-        
+        if SortedNearMedModels.count > 0 {
+            
+            let nearestName = SortedNearMedModels[0].medName
+            let nearestAddress = SortedNearMedModels[0].medAddress
+            let nearestPhone = SortedNearMedModels[0].medPhone
+            let nearestStoreNumber = SortedNearMedModels[0].medStoreNumber
+            let nearestDistance = Int(SortedNearMedModels[0].medDistance)
+            let nearestUpdateTime = SortedNearMedModels[0].medUpdateTime
+            
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestName, forKey: "nearestName")
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestAddress, forKey: "nearestAddress")
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestPhone, forKey: "nearestPhone")
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestStoreNumber, forKey: "nearestStoreNumber")
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestDistance, forKey: "nearestDistance")
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(nearestUpdateTime, forKey: "nearestUpdateTime")
+            UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.set(sortedNumber, forKey: "totalCount")
+            
+        }
+
         WidgetCenter.shared.reloadAllTimelines()
     }
     

@@ -335,7 +335,7 @@ struct gmapView: UIViewRepresentable {
         let image = UIImage(named: "OrangePin")!
         // The image on which text has to be added
         UIGraphicsBeginImageContext(image.size)
-        image.draw(in: CGRect(x: CGFloat(5), y: CGFloat(0), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
+        image.draw(in: CGRect(x: CGFloat(count < 10 ? 0.6 : 4.5), y: CGFloat(-0.4), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
         let rect = CGRect(x: CGFloat(13.5), y: CGFloat(24), width: CGFloat(image.size.width), height: CGFloat(image.size.height))
         // -x => Move Left, +x => Move Right
         // -y => Move up, +y => Move down
@@ -359,7 +359,7 @@ struct gmapView: UIViewRepresentable {
         let image = UIImage(named: "mapPin")!
         // The image on which text has to be added
         UIGraphicsBeginImageContext(image.size)
-        image.draw(in: CGRect(x: CGFloat(5), y: CGFloat(0), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
+        image.draw(in: CGRect(x: CGFloat(count < 10 ? 0.6 : 4.5), y: CGFloat(-0.4), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
         let rect = CGRect(x: CGFloat(11.3), y: CGFloat(18), width: CGFloat(image.size.width), height: CGFloat(image.size.height))
         // -x => Move Left, +x => Move Right
         // -y => Move up, +y => Move down

@@ -142,6 +142,9 @@ struct RapidAntigenTestMapWidgetEntryView : View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
+        .onChange(of: entry.nearestMed.distance != UserDefaults(suiteName: "group.com.novachens.RapidAntigenTestMap")!.integer(forKey: "nearestDistance")) { newValue in
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
 }
 
