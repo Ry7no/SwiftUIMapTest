@@ -10,6 +10,8 @@ import SwiftUI
 struct SplashScreenView: View {
     
     @State private var isActive = false
+    @Environment(\.scenePhase) private var scenePhase
+    var ad = OpenInterstitialAD()
     
     // Balls Animation States
     @State var ball1MoveY = -100.0
@@ -28,6 +30,7 @@ struct SplashScreenView: View {
         if isActive {
             
             ContentView()
+                
             
         } else {
             

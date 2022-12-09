@@ -63,6 +63,9 @@ struct NavBarView: View {
                 DispatchQueue.main.async {
                     medDataModel.downloadCSVOnline()
                 }
+                
+//                fatalError("Crash was triggered")
+                
             } label: {
                 Image(systemName: "arrow.triangle.2.circlepath")
                     .font(.system(size: 24, weight: .semibold))

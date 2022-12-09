@@ -109,6 +109,9 @@ struct MapView: View {
                 ProgressView()
                     .padding()
             }
+            
+            Banner()
+            
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -284,6 +287,11 @@ struct gmapView: UIViewRepresentable {
                 }
             }
         }
+        
+//        func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+//            print(1)
+//            return true
+//        }
         
 //        func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
 //            let callout = UIHostingController(rootView: MarkerView())

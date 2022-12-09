@@ -122,9 +122,9 @@ struct SettingsView: View {
             .padding(.horizontal, 15)
             .padding(.vertical, 10)
             
-//
-
             Spacer()
+            
+            Banner()
             
             
         

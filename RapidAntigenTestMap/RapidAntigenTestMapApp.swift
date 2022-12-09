@@ -22,6 +22,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct RapidAntigenTestMapApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @Environment(\.scenePhase) private var scenePhase
+    var ad = OpenInterstitialAD()
     
     init() {
         GMSServices.provideAPIKey("AIzaSyBp74yPDJDGIHB2UxeGQ6URF6j83JEInDs")
@@ -31,5 +33,12 @@ struct RapidAntigenTestMapApp: App {
         WindowGroup {
             SplashScreenView()
         }
+        .onChange(of: scenePhase) { phase in
+            if phase == .active {
+                ad.tryToPresentAd()
+            }
+        }
+        
     }
+    
 }

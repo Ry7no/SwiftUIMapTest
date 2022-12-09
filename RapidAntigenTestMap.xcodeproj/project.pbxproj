@@ -46,6 +46,8 @@
 		FD6B3D6828BF4AC000949C52 /* MyFlyLocationMutatable.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */; };
 		FD8EC4DB28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FD8EC4DE28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition */; };
 		FD8EC4DC28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FD8EC4DE28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition */; };
+		FDB4E1BE2940D2FF0054C5D5 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = FDB4E1BD2940D2FF0054C5D5 /* GoogleMobileAds */; };
+		FDB4E1C02940D54E0054C5D5 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4E1BF2940D54E0054C5D5 /* AdManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,7 @@
 		FD6B3D6728BF4AC000949C52 /* MyFlyLocationMutatable.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MyFlyLocationMutatable.gpx; sourceTree = "<group>"; };
 		FD8EC4DD28C7827F00F4E28C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/RapidAntigenTestMapWidget.intentdefinition; sourceTree = "<group>"; };
 		FD8EC4E028C7828100F4E28C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RapidAntigenTestMapWidget.strings; sourceTree = "<group>"; };
+		FDB4E1BF2940D54E0054C5D5 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB4E1BE2940D2FF0054C5D5 /* GoogleMobileAds in Frameworks */,
 				FD6B3D6028BF47B500949C52 /* FirebaseAnalyticsSwift in Frameworks */,
 				FD6B3D6228BF47B500949C52 /* FirebaseCrashlytics in Frameworks */,
 				FD6B3D6428BF47B500949C52 /* FirebasePerformance in Frameworks */,
@@ -290,6 +294,7 @@
 			children = (
 				FD30CF34283FBC0F0025EE66 /* MedDataModel.swift */,
 				FD30CF3A283FD28A0025EE66 /* LocationManager.swift */,
+				FDB4E1BF2940D54E0054C5D5 /* AdManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -334,7 +339,7 @@
 				FD30CEF6283D14810025EE66 /* Resources */,
 				DC99B5116E2BDA2CA7D43DBA /* [CP] Copy Pods Resources */,
 				51DBA3012843D262001F904B /* Embed App Extensions */,
-				FD8EC4EA28C8395F00F4E28C /* ShellScript */,
+				FD8EC4EA28C8395F00F4E28C /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -347,6 +352,7 @@
 				FD6B3D5F28BF47B500949C52 /* FirebaseAnalyticsSwift */,
 				FD6B3D6128BF47B500949C52 /* FirebaseCrashlytics */,
 				FD6B3D6328BF47B500949C52 /* FirebasePerformance */,
+				FDB4E1BD2940D2FF0054C5D5 /* GoogleMobileAds */,
 			);
 			productName = RapidAntigenTestMap;
 			productReference = FD30CEF8283D14810025EE66 /* RapidAntigenTestMap.app */;
@@ -445,6 +451,7 @@
 			mainGroup = FD30CEEF283D14810025EE66;
 			packageReferences = (
 				FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FDB4E1BC2940D2FF0054C5D5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = FD30CEF9283D14810025EE66 /* Products */;
 			projectDirPath = "";
@@ -598,7 +605,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests/Pods-RapidAntigenTestMap-RapidAntigenTestMapUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD8EC4EA28C8395F00F4E28C /* ShellScript */ = {
+		FD8EC4EA28C8395F00F4E28C /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -608,14 +615,16 @@
 			inputPaths = (
 				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -634,6 +643,7 @@
 				51F36A422841BDE5003BFF8C /* NavBarView.swift in Sources */,
 				51F36A402841B906003BFF8C /* SettingsView.swift in Sources */,
 				FD30CF31283FBA060025EE66 /* MapView.swift in Sources */,
+				FDB4E1C02940D54E0054C5D5 /* AdManager.swift in Sources */,
 				FD30CF2E283FB8110025EE66 /* Tab.swift in Sources */,
 				FD8EC4DB28C7827F00F4E28C /* RapidAntigenTestMapWidget.intentdefinition in Sources */,
 				51788D0A2854A285009CB1D2 /* GifImage.swift in Sources */,
@@ -826,7 +836,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RapidAntigenTestMap/RapidAntigenTestMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
@@ -847,7 +857,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -866,7 +876,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = RapidAntigenTestMap/RapidAntigenTestMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"RapidAntigenTestMap/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
@@ -887,7 +897,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.novachens.RapidAntigenTestMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1091,6 +1101,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		FDB4E1BC2940D2FF0054C5D5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1113,6 +1131,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD6B3D5C28BF47B500949C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebasePerformance;
+		};
+		FDB4E1BD2940D2FF0054C5D5 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDB4E1BC2940D2FF0054C5D5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

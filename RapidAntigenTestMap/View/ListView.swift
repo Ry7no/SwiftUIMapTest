@@ -12,6 +12,9 @@ struct ListView: View {
     @ObservedObject var medDataModel = MedDataModel()
     @ObservedObject var locationManager = LocationManager()
     
+    @Environment(\.scenePhase) private var scenePhase
+    var ad = OpenInterstitialAD()
+    
     @AppStorage("isNewList") var isNewList: Bool = DefaultSettings.isNewList
     @AppStorage("isExpanding") var isExpanding: Bool = DefaultSettings.isExpanding
     
@@ -47,7 +50,7 @@ struct ListView: View {
     var body: some View {
         
         VStack {
-            
+
             NavBarView(medDataModel: medDataModel, locationManager: locationManager, title: "鄰近藥局清單")
             
             if let Meds = medDataModel.SortedNearMedModels {
@@ -118,6 +121,8 @@ struct ListView: View {
                 }
                 
             }
+
+            Banner()
             
         }
         .onAppear {
@@ -128,6 +133,8 @@ struct ListView: View {
                     
                 }
             }
+            
+            ad.tryToPresentAd()
         }
         
     }
@@ -316,8 +323,6 @@ extension ListView {
                     }
                     
                     refresh.offset = reader.frame(in: .global).minY
-//                    minusOffset = refresh.offset - refresh.startOffset
-//                    minusOffset = minusOffset * 180 / 100
                     
                     if refresh.offset - refresh.startOffset > 90 && !refresh.started {
                         
@@ -334,11 +339,6 @@ extension ListView {
                         }
                         refreshData()
                     }
-                    
-//                    if refresh.startOffset == refresh.offset && refresh.started && refresh.released && refresh.invalid {
-//                        refresh.invalid = false
-//                        refreshData()
-//                    }
                 }
                 
                 return AnyView(Color.black.frame(width: 0, height: 0))
